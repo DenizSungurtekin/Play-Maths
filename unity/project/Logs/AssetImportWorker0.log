@@ -1,0 +1,331 @@
+Using pre-set license
+Built from '2020.3/staging' branch; Version is '2020.3.3f1 (76626098c1c4) revision 7758432'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Education; OS build 19043.906; Version 2009; 64bit' Language: 'fr' Physical Memory: 32694 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2020.3.3f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/Users/dede/OneDrive/Documents/Bureau/GithubWork/Play-Maths/unity/project
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+51266
+Successfully changed project path to: C:/Users/dede/OneDrive/Documents/Bureau/GithubWork/Play-Maths/unity/project
+C:/Users/dede/OneDrive/Documents/Bureau/GithubWork/Play-Maths/unity/project
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 42.93 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.3f1 (76626098c1c4)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.3f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/dede/OneDrive/Documents/Bureau/GithubWork/Play-Maths/unity/project/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1050 Ti (ID=0x1c82)
+    Vendor:   
+    VRAM:     4018 MB
+    Driver:   27.21.14.5671
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.3f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.3f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.3f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56976
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.3f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002744 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 45.68 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.414 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.001246 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 40.71 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.099 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 0.38 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1818 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 85.8 MB.
+System memory in use after: 85.8 MB.
+
+Unloading 25 unused Assets to reduce memory usage. Loaded Objects now: 2260.
+Total: 2.599800 ms (FindLiveObjects: 0.278800 ms CreateObjectMapping: 0.108600 ms MarkObjects: 2.062800 ms  DeleteObjects: 0.148600 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Game/Animation/Game Over/GameOverPanel.controller
+  artifactKey: Guid(f18ed55e471edac459282fbf423d58aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Animation/Game Over/GameOverPanel.controller using Guid(f18ed55e471edac459282fbf423d58aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '99197c54a43c335374bd7edd70abc942') in 0.050051 seconds
+  Import took 0.053299 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.442088 seconds.
+  path: Assets/Game/Animation/Game Over/Idle.anim
+  artifactKey: Guid(8ddfb0925ae60a3458d903217e2c061a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Animation/Game Over/Idle.anim using Guid(8ddfb0925ae60a3458d903217e2c061a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d721753a71bcf8b5baf6cf713ffe3fe') in 0.010109 seconds
+  Import took 0.013156 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.037748 seconds.
+  path: Assets/Game/Animation/Game Over/Idle.anim
+  artifactKey: Guid(8ddfb0925ae60a3458d903217e2c061a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Animation/Game Over/Idle.anim using Guid(8ddfb0925ae60a3458d903217e2c061a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d721753a71bcf8b5baf6cf713ffe3fe') in 0.003133 seconds
+  Import took 0.006135 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.088077 seconds.
+  path: Assets/Game/Animation/Game Over/SlideIn.anim
+  artifactKey: Guid(32271625d52b26043b1d8d40e8909614) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Animation/Game Over/SlideIn.anim using Guid(32271625d52b26043b1d8d40e8909614) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e8328533812d597e4699f56a06b6b4b5') in 0.008162 seconds
+  Import took 0.011317 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000360 seconds.
+  path: Assets/Game/Animation/Game Over/SlideIn.anim
+  artifactKey: Guid(32271625d52b26043b1d8d40e8909614) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Animation/Game Over/SlideIn.anim using Guid(32271625d52b26043b1d8d40e8909614) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e8328533812d597e4699f56a06b6b4b5') in 0.003953 seconds
+  Import took 0.007108 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.784611 seconds.
+  path: Assets/Game/Plugin/iOS/iOSScreenshot.m
+  artifactKey: Guid(8f58d2ed9d105b845aeb9896c78baa74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Plugin/iOS/iOSScreenshot.m using Guid(8f58d2ed9d105b845aeb9896c78baa74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c1bed769bc40dab0750bcc6990dc3f20') in 0.010925 seconds
+  Import took 0.014053 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.106823 seconds.
+  path: Assets/Game/Plugin/iOS/iOSScreenshot.m
+  artifactKey: Guid(8f58d2ed9d105b845aeb9896c78baa74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Plugin/iOS/iOSScreenshot.m using Guid(8f58d2ed9d105b845aeb9896c78baa74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c1bed769bc40dab0750bcc6990dc3f20') in 0.003697 seconds
+  Import took 0.007472 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.389894 seconds.
+  path: Assets/Game/Prefabs/GameManager.prefab
+  artifactKey: Guid(24730ecc924a7b848b681023d33828d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Prefabs/GameManager.prefab using Guid(24730ecc924a7b848b681023d33828d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b81758d06505b3260ad019f628fec55') in 0.022820 seconds
+  Import took 0.025990 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.919601 seconds.
+  path: Assets/Game/Scripts/AdsManager.cs
+  artifactKey: Guid(23f1c451b59cf7849934ba385a94a003) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Scripts/AdsManager.cs using Guid(23f1c451b59cf7849934ba385a94a003) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd6c42d66f6b0ff9a8bf28a463ac6af55') in 0.072812 seconds
+  Import took 0.075899 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.530555 seconds.
+  path: Assets/Game/Sounds/background.mp3
+  artifactKey: Guid(b5f2b538cd4e20b43b411f1eadf6a2fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Sounds/background.mp3 using Guid(b5f2b538cd4e20b43b411f1eadf6a2fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '92f2051dd0050ffcaefdffe75e9a2c33') in 0.258966 seconds
+  Import took 0.262093 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000298 seconds.
+  path: Assets/Game/Sounds/Beeps1.mp3
+  artifactKey: Guid(2d432d43df640e44fbba6c385e2bae7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Sounds/Beeps1.mp3 using Guid(2d432d43df640e44fbba6c385e2bae7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '31876fcb4c370c0d15b44fee2ab7c189') in 0.015251 seconds
+  Import took 0.018278 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000283 seconds.
+  path: Assets/Game/Sounds/Pops3.mp3
+  artifactKey: Guid(e508e12c584c747459054f9f53c8ee1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Sounds/Pops3.mp3 using Guid(e508e12c584c747459054f9f53c8ee1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ece3e66253cfc9c2c87035edaa4dbe9') in 0.015060 seconds
+  Import took 0.018422 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000284 seconds.
+  path: Assets/Game/Sounds/Zings10.mp3
+  artifactKey: Guid(d2462e1f13ed4af4cb8b595ab3924534) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Sounds/Zings10.mp3 using Guid(d2462e1f13ed4af4cb8b595ab3924534) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00e2f33c863556b6d82b69a60ac8dc4a') in 0.012965 seconds
+  Import took 0.069718 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002991 seconds.
+  path: Assets/Game/Sounds/Zings10.mp3
+  artifactKey: Guid(d2462e1f13ed4af4cb8b595ab3924534) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Sounds/Zings10.mp3 using Guid(d2462e1f13ed4af4cb8b595ab3924534) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00e2f33c863556b6d82b69a60ac8dc4a') in 0.007819 seconds
+  Import took 0.011060 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.193809 seconds.
+  path: Assets/Game/Sprites/gameOverbutton.png
+  artifactKey: Guid(56a9d0727dcaeba4fbc5f49e1b46c789) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Sprites/gameOverbutton.png using Guid(56a9d0727dcaeba4fbc5f49e1b46c789) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e5e920c3ef1020ed2cb79077181699b') in 0.114140 seconds
+  Import took 0.117398 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000287 seconds.
+  path: Assets/Game/Sprites/mathsBG1.png
+  artifactKey: Guid(997541f2c30435a4eb995b5895ca5c1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Sprites/mathsBG1.png using Guid(997541f2c30435a4eb995b5895ca5c1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1d44d9c806d31c7a65d3223ec0fdf9ad') in 0.024286 seconds
+  Import took 0.027344 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000316 seconds.
+  path: Assets/Game/Sprites/pressedButton.png
+  artifactKey: Guid(18e05bb558d8057439d7e4a10ba91f10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Sprites/pressedButton.png using Guid(18e05bb558d8057439d7e4a10ba91f10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '916a7f844ef0b3ddaa3ef8be33985b95') in 0.041840 seconds
+  Import took 0.046069 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000237 seconds.
+  path: Assets/Game/Sprites/logo48.png
+  artifactKey: Guid(2af76339bc8b2d54aa569cd110695d6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Sprites/logo48.png using Guid(2af76339bc8b2d54aa569cd110695d6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8afd934cc990e20419518512a36cb65a') in 0.029672 seconds
+  Import took 0.032495 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000269 seconds.
+  path: Assets/Game/Sprites/logo192.png
+  artifactKey: Guid(0c440740c85d7ed4ea588ac44a7de194) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Sprites/logo192.png using Guid(0c440740c85d7ed4ea588ac44a7de194) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a5a904f323c84a102d8a547bb9d5f00') in 0.038384 seconds
+  Import took 0.041180 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000269 seconds.
+  path: Assets/Game/Sprites/spriteSheet.png
+  artifactKey: Guid(55db4dcc469f3c2498fbc9ff564ef23a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Sprites/spriteSheet.png using Guid(55db4dcc469f3c2498fbc9ff564ef23a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd354cf9a3c19859e5666d0b727e1085') in 0.101728 seconds
+  Import took 0.105026 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000267 seconds.
+  path: Assets/Game/Sprites/modeButton.png
+  artifactKey: Guid(de449a6598b9c5d4da94fa6e973e3174) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Sprites/modeButton.png using Guid(de449a6598b9c5d4da94fa6e973e3174) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '69e018e83412b5cb19f99d49070aaecc') in 0.027629 seconds
+  Import took 0.030875 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000287 seconds.
+  path: Assets/Game/Sprites/rateButton.png
+  artifactKey: Guid(60b8f40c52981ba4e9fa6af7a312dba0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Sprites/rateButton.png using Guid(60b8f40c52981ba4e9fa6af7a312dba0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '654bd1221d60d0a6a429f31a015d6568') in 0.016435 seconds
+  Import took 0.019681 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000269 seconds.
+  path: Assets/Game/Sprites/logo96.png
+  artifactKey: Guid(3a90aebdbb35fce4a8e093a363de8b6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Sprites/logo96.png using Guid(3a90aebdbb35fce4a8e093a363de8b6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b68c4f8fd9b3e176e758b82dfbcd576') in 0.038046 seconds
+  Import took 0.041320 seconds .
+
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 2.67 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 11 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 53.0 MB.
+System memory in use after: 52.9 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 2325.
+Total: 3.168800 ms (FindLiveObjects: 0.214800 ms CreateObjectMapping: 0.045000 ms MarkObjects: 2.777000 ms  DeleteObjects: 0.131000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001512 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.39 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.962 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.41 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1813 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.0 MB.
+System memory in use after: 88.9 MB.
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 2329.
+Total: 2.362000 ms (FindLiveObjects: 0.241600 ms CreateObjectMapping: 0.044600 ms MarkObjects: 1.945200 ms  DeleteObjects: 0.129300 ms)
+
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 2.60 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 11 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 52.8 MB.
+System memory in use after: 52.7 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 2329.
+Total: 2.155400 ms (FindLiveObjects: 0.223500 ms CreateObjectMapping: 0.044900 ms MarkObjects: 1.748400 ms  DeleteObjects: 0.137400 ms)
+
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 2.85 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 11 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 52.8 MB.
+System memory in use after: 52.7 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 2329.
+Total: 2.203400 ms (FindLiveObjects: 0.286700 ms CreateObjectMapping: 0.058200 ms MarkObjects: 1.724600 ms  DeleteObjects: 0.133000 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 498.811379 seconds.
+  path: Assets/Game/Scripts/MathsAndAnswerScript.cs
+  artifactKey: Guid(6c6bba3244b8bc54594d449fa226bfa7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Scripts/MathsAndAnswerScript.cs using Guid(6c6bba3244b8bc54594d449fa226bfa7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff5906f25c31a072dbca515a3c40ee7a') in 0.010486 seconds
+  Import took 0.014849 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.165778 seconds.
+  path: Assets/Game/Scripts/MathsAndAnswerScript.cs
+  artifactKey: Guid(6c6bba3244b8bc54594d449fa226bfa7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Scripts/MathsAndAnswerScript.cs using Guid(6c6bba3244b8bc54594d449fa226bfa7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff5906f25c31a072dbca515a3c40ee7a') in 0.004781 seconds
+  Import took 0.008870 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
