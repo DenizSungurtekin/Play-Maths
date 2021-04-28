@@ -22,11 +22,5 @@ public class Player : MonoBehaviour
 
            }
 
-           if (Input.GetKey(KeyCode.DownArrow)){
-
-               transform.Translate(Vector3.down * ms * Time.deltaTime);
-
-           }
-
     }
 }

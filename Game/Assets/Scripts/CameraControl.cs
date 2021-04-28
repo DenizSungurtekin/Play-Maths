@@ -22,19 +22,16 @@ public class CameraControl : MonoBehaviour
     {
         // Camera
         Vector3 targetpos = new Vector3(target.position.x,target.position.y,transform.position.z);
-        transform.position = Vector3.Lerp(transform.position, targetpos,0.2f);
+        transform.position = targetpos;
 
         // Background
 
         if (transform.position.y >= bg2.position.y) {
             bg1.position = new Vector3(bg1.position.x, bg2.position.y + size, bg1.position.z);
+            ScoreScript.scorevalue += 10;
             SwitchBac();
         }
 
-        if (transform.position.y < bg1.position.y) {
-            bg2.position = new Vector3(bg2.position.x, bg1.position.y - size, bg2.position.z);
-            SwitchBac();
-        }
     }
 
     private void SwitchBac()
