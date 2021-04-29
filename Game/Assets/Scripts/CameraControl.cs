@@ -13,11 +13,15 @@ public class CameraControl : MonoBehaviour
     private float size;
 
     private int compt;
-
+    EquationControl equationControl;
+    BouttonsControl bouttonsControl;
+    //EquationControl equationControl = new EquationControl();
     // Start is called before the first frame update
     void Start()
     {
         size = bg1.GetComponent<BoxCollider2D>().size.y;
+
+
     }
 
     // Update is called once per frame
@@ -33,13 +37,20 @@ public class CameraControl : MonoBehaviour
             bg1.position = new Vector3(bg1.position.x, bg2.position.y + size, bg1.position.z);
             ScoreScript.scorevalue += 10;
 
-            if (compt % 2 == 0) {
-                EquationControl.a = Random.Range(1,10);
-                EquationControl.b = Random.Range(1,10);
-            } else {
-                EquationControl.c = Random.Range(1,10);
-                EquationControl.d = Random.Range(1,10);
+            equationControl = GameObject.FindGameObjectWithTag("equations").GetComponent<EquationControl>();
+            equationControl.UpdateEquation(compt);
+
+            bouttonsControl = GameObject.FindGameObjectWithTag("buttons").GetComponent<BouttonsControl>();
+
+            if (compt % 2 == 0)
+            {
+                bouttonsControl.ChangeBoutonsValueSecondBg();
             }
+            else
+            {
+                bouttonsControl.ChangeBoutonsValueFirstBg();
+            }
+
 
             compt++;
 
