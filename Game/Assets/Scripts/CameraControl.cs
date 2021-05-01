@@ -9,16 +9,19 @@ public class CameraControl : MonoBehaviour
     public Transform target;
     public Transform bg1;
     public Transform bg2;
+    public Transform ligneInvisible,firstText,secondText; //firstText is the equation text
 
     private float size;
 
-    private int compt;
+    private int compt,textCompt; //compt is used to change button value depending of the equation of the current bg, textCompt is to know when to check button value
     EquationControl equationControl;
     BouttonsControl bouttonsControl;
-    //EquationControl equationControl = new EquationControl();
+   
+
     // Start is called before the first frame update
     void Start()
     {
+
         size = bg1.GetComponent<BoxCollider2D>().size.y;
 
 
@@ -35,7 +38,6 @@ public class CameraControl : MonoBehaviour
 
         if (transform.position.y >= bg2.position.y) {
             bg1.position = new Vector3(bg1.position.x, bg2.position.y + size, bg1.position.z);
-            ScoreScript.scorevalue += 10;
 
             equationControl = GameObject.FindGameObjectWithTag("equations").GetComponent<EquationControl>();
             equationControl.UpdateEquation(compt);
@@ -51,13 +53,26 @@ public class CameraControl : MonoBehaviour
                 bouttonsControl.ChangeBoutonsValueFirstBg();
             }
 
-
             compt++;
-
             SwitchBac();
 
         }
 
+        if ((ligneInvisible.position.y >= firstText.position.y) && (textCompt % 2 == 0))
+        {
+            bouttonsControl = GameObject.FindGameObjectWithTag("buttons").GetComponent<BouttonsControl>();
+            bouttonsControl.CheckButtonValueFirstBg();
+            textCompt++;
+
+        }
+
+        if ((ligneInvisible.position.y >= secondText.position.y) && (textCompt % 2 == 1))
+        {
+            bouttonsControl = GameObject.FindGameObjectWithTag("buttons").GetComponent<BouttonsControl>();
+            bouttonsControl.CheckButtonValueSecondBg();
+            textCompt++;
+
+        }
     }
 
     private void SwitchBac()

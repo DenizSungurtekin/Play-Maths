@@ -178,6 +178,7 @@ MonoBehaviour:
   answer: 0
   one: 0
   position_answer: 0
+  selected_answer: 0
   equationControl: {fileID: 0}
 --- !u!114 &24116411
 MonoBehaviour:
@@ -369,8 +370,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7858291c4242346699af6cc9c70e4cdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eq1: {fileID: 0}
-  eq2: {fileID: 0}
+  eq1: {fileID: 1666617729}
+  eq2: {fileID: 28256022}
   a: 0
   b: 0
   c: 0
@@ -591,6 +592,7 @@ MonoBehaviour:
   answer: 0
   one: 0
   position_answer: 0
+  selected_answer: 0
   equationControl: {fileID: 0}
 --- !u!1 &211935404
 GameObject:
@@ -647,6 +649,7 @@ MonoBehaviour:
   answer: 0
   one: 0
   position_answer: 0
+  selected_answer: 0
   equationControl: {fileID: 0}
 --- !u!114 &211935407
 MonoBehaviour:
@@ -979,6 +982,9 @@ MonoBehaviour:
   target: {fileID: 534174366}
   bg1: {fileID: 551848333}
   bg2: {fileID: 1815909104}
+  ligneInvisible: {fileID: 1413700089}
+  firstText: {fileID: 1666617731}
+  secondText: {fileID: 28256021}
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -1447,6 +1453,7 @@ MonoBehaviour:
   answer: 0
   one: 0
   position_answer: 0
+  selected_answer: 0
   equationControl: {fileID: 0}
 --- !u!114 &804251011
 MonoBehaviour:
@@ -2221,6 +2228,7 @@ MonoBehaviour:
   answer: 0
   one: 0
   position_answer: 0
+  selected_answer: 0
   equationControl: {fileID: 0}
 --- !u!114 &1946551314
 MonoBehaviour:

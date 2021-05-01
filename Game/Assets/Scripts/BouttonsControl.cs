@@ -7,29 +7,61 @@ public class BouttonsControl : MonoBehaviour
 {
 
     public float answer,one;
-    public int position_answer;
+    public int position_answer,selected_answer;
     public EquationControl equationControl;
-
+    GameObject[] btn;
 
 
 
     // Start is called before the first frame update
     void Start()
     {
-  
-        
+        btn = GameObject.FindGameObjectsWithTag("buttons");
+        selected_answer = 0; //initial value if no button are selected
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        // determine which button is pressed
+        btn[selected_answer].GetComponentInChildren<Text>().color = Color.green;
+
+        //Debug.Log("Text: " + selected_answer);
+
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            btn[selected_answer].GetComponentInChildren<Text>().color = Color.white;
+            selected_answer = 0;
+
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            btn[selected_answer].GetComponentInChildren<Text>().color = Color.white;
+            selected_answer = 1;
+
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            btn[selected_answer].GetComponentInChildren<Text>().color = Color.white;
+            selected_answer = 2;
+
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            btn[selected_answer].GetComponentInChildren<Text>().color = Color.white;
+            selected_answer = 3;
+
+        }
+
+
+
+
+
     }
 
     public void ChangeBoutonsValueFirstBg()
     {
-
         GameObject[] btn = GameObject.FindGameObjectsWithTag("buttons");
 
         position_answer = Random.Range(0, 3);
@@ -72,20 +104,10 @@ public class BouttonsControl : MonoBehaviour
                 }
 
             }
-
-
-
-     
-
-
-
-
-
     }
 
     public void ChangeBoutonsValueSecondBg()
     {
-
         GameObject[] btn = GameObject.FindGameObjectsWithTag("buttons");
 
         position_answer = Random.Range(0, 3);
@@ -128,14 +150,39 @@ public class BouttonsControl : MonoBehaviour
             }
 
         }
+    }
 
 
 
+    public void CheckButtonValueFirstBg()
+    {
 
-
-
-
+        if (btn[selected_answer].GetComponentInChildren<Text>().text == answer.ToString())
+        {
+            ScoreScript.scorevalue += 10;
+        }
+        else
+        {
+            ScoreScript.scorevalue -= 10;
+        }
 
 
     }
+
+    public void CheckButtonValueSecondBg()
+    {
+        if (btn[selected_answer].GetComponentInChildren<Text>().text == answer.ToString())
+        {
+            ScoreScript.scorevalue += 10;
+        }
+        else
+        {
+            ScoreScript.scorevalue -= 10;
+        }
+
+
+    }
+
+
+
 }
