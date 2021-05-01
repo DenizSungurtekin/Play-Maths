@@ -6,18 +6,22 @@ using UnityEngine.UI;
 public class Music : MonoBehaviour
 {
 
-    bool isMute;
     public Button musicBoutonOn;
     public Button musicBoutonOff;
+
     public GameObject button;
-    public GameObject button2;
+    public GameObject button1;
+
 
 
     // Start is called before the first frame update
     void Start()
     {
-        //Disable unMute button
-        button2.SetActive(false);
+        if (button.activeSelf)  //Check if mute button is actif
+            {
+            //Disable unMute button if the mute button is actif. ( The start function is run after each event)
+            button1.SetActive(false);
+            }
 
         Button btn = musicBoutonOn.GetComponent<Button>();
         Button btnOff = musicBoutonOff.GetComponent<Button>();
@@ -37,26 +41,18 @@ public class Music : MonoBehaviour
     //Mute sound and activate the unmute button
     public void Mute()
     {
-
         button.SetActive(false);
-        button2.SetActive(true);
+        button1.SetActive(true);
 
-        isMute = !isMute;
-        AudioListener.volume = isMute ? 0 : 1;
-        
-
+        AudioListener.volume = 0;
     }
 
-    //unmute sound and activate the mute button
+    //Unmute sound and activate the mute button
     public void UnMute()
     {
-        
+        button1.SetActive(false);
         button.SetActive(true);
-        button2.SetActive(false);
 
-        isMute = !isMute;
-        AudioListener.volume = isMute ? 0 : 1;
-        
-
+        AudioListener.volume = 1;   
     }
 }

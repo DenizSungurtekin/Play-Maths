@@ -1393,7 +1393,7 @@ MonoBehaviour:
   musicBoutonOn: {fileID: 674374872}
   musicBoutonOff: {fileID: 1855492254}
   button: {fileID: 674374870}
-  button2: {fileID: 1855492252}
+  button1: {fileID: 1855492252}
 --- !u!1 &804251008
 GameObject:
   m_ObjectHideFlags: 0
@@ -2165,7 +2165,7 @@ MonoBehaviour:
   musicBoutonOn: {fileID: 674374872}
   musicBoutonOff: {fileID: 1855492254}
   button: {fileID: 674374870}
-  button2: {fileID: 1855492252}
+  button1: {fileID: 1855492252}
 --- !u!1 &1946551311
 GameObject:
   m_ObjectHideFlags: 0
