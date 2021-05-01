@@ -16,11 +16,11 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-           if (Input.GetKey(KeyCode.UpArrow)){
+           
 
                transform.Translate(Vector3.up * ms * Time.deltaTime);
 
-           }
+           
 
     }
 }
