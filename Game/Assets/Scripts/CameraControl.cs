@@ -18,25 +18,32 @@ public class CameraControl : MonoBehaviour
     public Transform bg2;
     public Transform ligneInvisible,firstText,secondText; //firstText is the equation text
 
-    private float size;
+    private float size,data,constante;
+    public string operation1;
+    public string operation2;
+    
+
 
     // difficult and scrolling speed should be defined here
     private int compt,textCompt; //compt is used to change button value depending of the equation of the current bg, textCompt is to know when to check button value
     EquationControl equationControl;
     BouttonsControl bouttonsControl;
+    Player player;
 
     // difficulty in [1,10]
-    private int difficulty;
+    private float difficulty;
     //
 
     // Start is called before the first frame update
     void Start()
     {
 
-        difficulty = 5;
+        difficulty = (float)1.0;
+        player = GameObject.FindGameObjectWithTag("verticalmvt").GetComponent<Player>();
+        player.ms = (float)(1.0 + (2.0 / 9.0) * (difficulty - 1.0));
         size = bg1.GetComponent<BoxCollider2D>().size.y;
-
-
+        //output = output_start + ((output_end - output_start) / (input_end - input_start)) * (input - input_start)
+        // output = 1 + ((3-1) / (10 - 1)) * (difficulté - 1))
     }
 
     // Update is called once per frame
@@ -50,34 +57,48 @@ public class CameraControl : MonoBehaviour
 
         if (transform.position.y >= bg2.position.y) {
             bg1.position = new Vector3(bg1.position.x, bg2.position.y + size, bg1.position.z);
+            Debug.Log(difficulty);
 
-            equationControl = GameObject.FindGameObjectWithTag("equations").GetComponent<EquationControl>();
-            equationControl.UpdateEquation(compt,difficulty);
 
-            bouttonsControl = GameObject.FindGameObjectWithTag("buttons").GetComponent<BouttonsControl>();
 
+
+
+            //bouttonsControl = GameObject.FindGameObjectWithTag("buttons").GetComponent<BouttonsControl>();
+
+
+            /*
             if (compt % 2 == 0)
             {
-                bouttonsControl.ChangeBoutonsValueSecondBg();
+                operation2 = equationControl.op2;
+                bouttonsControl.ChangeBoutonsValueSecondBg(operation2);
             }
             else
             {
-                bouttonsControl.ChangeBoutonsValueFirstBg();
-            }
+                operation1 = equationControl.op1;
+                bouttonsControl.ChangeBoutonsValueFirstBg(operation1);
+            }*/
+            dataIn = ServerRequest();
+            data = dataIn[0];
+            //Debug.Log(data);
+
+            updateDifficulty(data);
+            updateGame(difficulty);
 
             compt++;
             SwitchBac();
-            dataIn = ServerRequest();
-            foreach (var item in dataIn)
-            {
-                Debug.Log(item.ToString());
-            }
+
+
+            /* foreach (var item in dataIn)
+             {
+                 Debug.Log(item.ToString());
+             }*/
+
         }
 
         if ((ligneInvisible.position.y >= firstText.position.y) && (textCompt % 2 == 0))
         {
             bouttonsControl = GameObject.FindGameObjectWithTag("buttons").GetComponent<BouttonsControl>();
-            bouttonsControl.CheckButtonValueFirstBg();
+            bouttonsControl.CheckButtonValueFirstBg(difficulty);
             textCompt++;
 
         }
@@ -85,7 +106,7 @@ public class CameraControl : MonoBehaviour
         if ((ligneInvisible.position.y >= secondText.position.y) && (textCompt % 2 == 1))
         {
             bouttonsControl = GameObject.FindGameObjectWithTag("buttons").GetComponent<BouttonsControl>();
-            bouttonsControl.CheckButtonValueSecondBg();
+            bouttonsControl.CheckButtonValueSecondBg(difficulty);
             textCompt++;
 
         }
@@ -143,5 +164,28 @@ public class CameraControl : MonoBehaviour
 
         client.Close();
         return floatsReceived;
+    }
+
+    public void updateGame(float difficulty)
+    {
+        equationControl = GameObject.FindGameObjectWithTag("equations").GetComponent<EquationControl>();
+        player = GameObject.FindGameObjectWithTag("verticalmvt").GetComponent<Player>();
+
+        equationControl.UpdateEquation(compt,difficulty);
+        player.ms = (float)(1.0 + (2.0 / 9.0) * (difficulty - 1.0));
+        Debug.Log(player.ms);
+
+
+    }
+
+    public void updateDifficulty(float received)
+    {
+        constante = (float)0.2;
+        difficulty = difficulty + received;
+        difficulty = difficulty + constante;
+        if (difficulty > 10)
+        {
+            difficulty = 10;
+        }
     }
 }

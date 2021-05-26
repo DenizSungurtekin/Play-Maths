@@ -6,16 +6,27 @@ using UnityEngine.UI;
 public class BouttonsControl : MonoBehaviour
 {
 
-    public float answer,one;
-    public int position_answer,selected_answer;
+
+    public GameObject heart1;
+    public GameObject heart2;
+    public GameObject heart3;
+    public GameObject heart4;
+
+
+
+    public int position_answer,selected_answer,min_range,max_range, answer,one,vie_perdu;
     public EquationControl equationControl;
     GameObject[] btn;
+    GameObject[] hearts;
 
 
 
     // Start is called before the first frame update
     void Start()
     {
+
+        vie_perdu = 0;
+        hearts = GameObject.FindGameObjectsWithTag("heart");
         btn = GameObject.FindGameObjectsWithTag("buttons");
         selected_answer = 0; //initial value if no button are selected
 
@@ -60,14 +71,17 @@ public class BouttonsControl : MonoBehaviour
 
     }
 
-    public void ChangeBoutonsValueFirstBg()
+    public void ChangeBoutonsValueFirstBg(int answer)
     {
         GameObject[] btn = GameObject.FindGameObjectsWithTag("buttons");
 
         position_answer = Random.Range(0, 3);
-        equationControl = GameObject.FindGameObjectWithTag("equations").GetComponent<EquationControl>();
-        answer = equationControl.a + equationControl.b;
+        //equationControl = GameObject.FindGameObjectWithTag("equations").GetComponent<EquationControl>();
 
+
+
+        min_range = answer - 5;
+        max_range = answer + 5;
 
          for (int i = 0; i < btn.Length; i++)
             {
@@ -80,14 +94,14 @@ public class BouttonsControl : MonoBehaviour
                 else
                 {
                     //for other ans button we assign random values
-                    one = Random.Range(1, 20);
+                    one = Random.Range(min_range, max_range);
                     btn[i].GetComponentInChildren<Text>().text = "" + one;
 
 
                     while (btn[i].GetComponentInChildren<Text>().text == "" + answer)
                     {
                         //we make sure that only one button has answer values
-                        btn[i].GetComponentInChildren<Text>().text = "" + Random.Range(1, 20);
+                        btn[i].GetComponentInChildren<Text>().text = "" + Random.Range(min_range, max_range);
                     }
 
                 if (i > 0)
@@ -95,7 +109,7 @@ public class BouttonsControl : MonoBehaviour
                     while (btn[i - 1].GetComponentInChildren<Text>().text == "" + one)
                     {
                         //we make sure that the previous value is not the same
-                        one = Random.Range(1, 20);
+                        one = Random.Range(min_range, max_range);
                         btn[i].GetComponentInChildren<Text>().text = "" + one;
                     }
                 }
@@ -106,14 +120,17 @@ public class BouttonsControl : MonoBehaviour
             }
     }
 
-    public void ChangeBoutonsValueSecondBg()
+    public void ChangeBoutonsValueSecondBg(int answer)
     {
         GameObject[] btn = GameObject.FindGameObjectsWithTag("buttons");
 
         position_answer = Random.Range(0, 3);
-        equationControl = GameObject.FindGameObjectWithTag("equations").GetComponent<EquationControl>();
-        answer = equationControl.c + equationControl.d;
 
+
+
+
+        min_range = answer - 5;
+        max_range = answer + 5;
 
         for (int i = 0; i < btn.Length; i++)
         {
@@ -126,14 +143,15 @@ public class BouttonsControl : MonoBehaviour
             else
             {
                 //for other ans button we assign random values
-                one = Random.Range(1, 20);
+
+                one = Random.Range(min_range, max_range);
                 btn[i].GetComponentInChildren<Text>().text = "" + one;
 
 
                 while (btn[i].GetComponentInChildren<Text>().text == "" + answer)
                 {
                     //we make sure that only one button has answer values
-                    btn[i].GetComponentInChildren<Text>().text = "" + Random.Range(1, 20);
+                    btn[i].GetComponentInChildren<Text>().text = "" + Random.Range(min_range, max_range);
                 }
 
                 if (i > 0)
@@ -141,7 +159,7 @@ public class BouttonsControl : MonoBehaviour
                     while (btn[i - 1].GetComponentInChildren<Text>().text == "" + one)
                     {
                         //we make sure that the previous value is not the same
-                        one = Random.Range(1, 20);
+                        one = Random.Range(min_range, max_range);
                         btn[i].GetComponentInChildren<Text>().text = "" + one;
                     }
                 }
@@ -154,41 +172,66 @@ public class BouttonsControl : MonoBehaviour
 
 
 
-    public void CheckButtonValueFirstBg()
+    public void CheckButtonValueFirstBg(float difficulty)
     {
+        equationControl = GameObject.FindGameObjectWithTag("equations").GetComponent<EquationControl>();
 
+        int diff = (int)difficulty;
         // Update for score depends on :
         // Need to import these parameters : Time, Difficulty
         // to compute the score par ex : score = time * Difficulty * cst
-        if (btn[selected_answer].GetComponentInChildren<Text>().text == answer.ToString())
+        if (btn[selected_answer].GetComponentInChildren<Text>().text == equationControl.answer1.ToString())
         {
-            ScoreScript.scorevalue += 10;
+            SoundManagerScript.PlaySound("good");
+            ScoreScript.scorevalue += 10 * diff;
         }
         else
         {
-            ScoreScript.scorevalue -= 10;
+            hearts[vie_perdu].SetActive(false);
+            vie_perdu += 1;
+            SoundManagerScript.PlaySound("bad");
+            if (ScoreScript.scorevalue - (10 * (11 - diff)) < 0)
+            {
+                ScoreScript.scorevalue = 0;
+            }
+            else { ScoreScript.scorevalue -= 10 * (11 - diff); }
+   
         }
 
 
     }
 
-    public void CheckButtonValueSecondBg()
+    public void CheckButtonValueSecondBg(float difficulty)
     {
 
+
+    equationControl = GameObject.FindGameObjectWithTag("equations").GetComponent<EquationControl>();
+        
+        int diff = (int)difficulty;
         // Update for score depends on :
         // Need to import these parameters : Time, Difficulty
         // to compute the score par ex : score = time * Difficulty * cst
-        if (btn[selected_answer].GetComponentInChildren<Text>().text == answer.ToString())
+        if (btn[selected_answer].GetComponentInChildren<Text>().text == equationControl.answer2.ToString())
         {
-            ScoreScript.scorevalue += 10;
+            SoundManagerScript.PlaySound ("good");
+            ScoreScript.scorevalue +=  10*diff;
         }
         else
         {
-            ScoreScript.scorevalue -= 10;
+            hearts[vie_perdu].SetActive(false);
+            vie_perdu += 1;
+            SoundManagerScript.PlaySound("bad");
+            if ((ScoreScript.scorevalue - (10 * (11 - diff))) < 0)
+            {
+                ScoreScript.scorevalue = 0;
+            }
+            else { ScoreScript.scorevalue -= 10 * (11 - diff); }
+
         }
 
 
     }
+
 
 
 

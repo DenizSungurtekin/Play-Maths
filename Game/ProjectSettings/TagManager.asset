@@ -6,6 +6,8 @@ TagManager:
   tags:
   - equations
   - buttons
+  - verticalmvt
+  - heart
   layers:
   - Default
   - TransparentFX
