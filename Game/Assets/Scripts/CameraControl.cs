@@ -13,15 +13,20 @@ public class CameraControl : MonoBehaviour
 
     private float size;
 
+    // difficult and scrolling speed should be defined here
     private int compt,textCompt; //compt is used to change button value depending of the equation of the current bg, textCompt is to know when to check button value
     EquationControl equationControl;
     BouttonsControl bouttonsControl;
-   
+
+    // difficulty in [1,10]
+    private int difficulty;
+    //
 
     // Start is called before the first frame update
     void Start()
     {
 
+        difficulty = 5;
         size = bg1.GetComponent<BoxCollider2D>().size.y;
 
 
@@ -40,7 +45,7 @@ public class CameraControl : MonoBehaviour
             bg1.position = new Vector3(bg1.position.x, bg2.position.y + size, bg1.position.z);
 
             equationControl = GameObject.FindGameObjectWithTag("equations").GetComponent<EquationControl>();
-            equationControl.UpdateEquation(compt);
+            equationControl.UpdateEquation(compt,difficulty);
 
             bouttonsControl = GameObject.FindGameObjectWithTag("buttons").GetComponent<BouttonsControl>();
 

@@ -9,6 +9,7 @@ public class EquationControl : MonoBehaviour
     public TextMesh eq2;
 
     public float a,b,c,d;
+    public int low,high;
     // Start is called before the first frame update
 
     BouttonsControl bouttonsControl;
@@ -17,13 +18,13 @@ public class EquationControl : MonoBehaviour
         eq1 = GameObject.Find("bg_1_text").GetComponent<TextMesh>();
         eq2 =  GameObject.Find("bg_2_text").GetComponent<TextMesh>();
 
-        
+
         a = Random.Range(1,10);
         b = Random.Range(1,10);
 
         c = Random.Range(1,10);
         d = Random.Range(1,10);
-        
+
         // Change also buttons
         bouttonsControl = GameObject.FindGameObjectWithTag("buttons").GetComponent<BouttonsControl>();
         bouttonsControl.ChangeBoutonsValueFirstBg();
@@ -36,17 +37,23 @@ public class EquationControl : MonoBehaviour
          eq2.text =  c.ToString() + " + " + d.ToString() + " = ?";
     }
 
-    public void UpdateEquation(int compt){
+    // Update equation here : parameters : compt, difficulty
+    public void UpdateEquation(int compt,int difficulty){
 
+        low = (difficulty - 1) * 10;
+        high = difficulty * 10;
+
+        // need to update range here, depending on the difficulty
+        // range increasing with the difficulty
         if (compt % 2 == 0)
         {
-            a = Random.Range(1, 10);
-            b = Random.Range(1, 10);
+            a = Random.Range(low, high);
+            b = Random.Range(low, high);
         }
         else
         {
-            c = Random.Range(1, 10);
-            d = Random.Range(1, 10);
+            c = Random.Range(low, high);
+            d = Random.Range(low, high);
         }
 
 

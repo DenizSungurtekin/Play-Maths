@@ -73,7 +73,7 @@ public class BouttonsControl : MonoBehaviour
             {
                 if (i == position_answer)
                 {
-                    //we check for location value and the assign it to the corresponding ans button 
+                    //we check for location value and the assign it to the corresponding ans button
                     btn[i].GetComponentInChildren<Text>().text = "" + answer;
 
                 }
@@ -82,11 +82,11 @@ public class BouttonsControl : MonoBehaviour
                     //for other ans button we assign random values
                     one = Random.Range(1, 20);
                     btn[i].GetComponentInChildren<Text>().text = "" + one;
-                    
+
 
                     while (btn[i].GetComponentInChildren<Text>().text == "" + answer)
                     {
-                        //we make sure that only one button has answer values 
+                        //we make sure that only one button has answer values
                         btn[i].GetComponentInChildren<Text>().text = "" + Random.Range(1, 20);
                     }
 
@@ -100,7 +100,7 @@ public class BouttonsControl : MonoBehaviour
                     }
                 }
 
-                    
+
                 }
 
             }
@@ -119,7 +119,7 @@ public class BouttonsControl : MonoBehaviour
         {
             if (i == position_answer)
             {
-                //we check for location value and the assign it to the corresponding ans button 
+                //we check for location value and the assign it to the corresponding ans button
                 btn[i].GetComponentInChildren<Text>().text = "" + answer;
 
             }
@@ -132,7 +132,7 @@ public class BouttonsControl : MonoBehaviour
 
                 while (btn[i].GetComponentInChildren<Text>().text == "" + answer)
                 {
-                    //we make sure that only one button has answer values 
+                    //we make sure that only one button has answer values
                     btn[i].GetComponentInChildren<Text>().text = "" + Random.Range(1, 20);
                 }
 
@@ -157,6 +157,9 @@ public class BouttonsControl : MonoBehaviour
     public void CheckButtonValueFirstBg()
     {
 
+        // Update for score depends on :
+        // Need to import these parameters : Time, Difficulty
+        // to compute the score par ex : score = time * Difficulty * cst
         if (btn[selected_answer].GetComponentInChildren<Text>().text == answer.ToString())
         {
             ScoreScript.scorevalue += 10;
@@ -171,6 +174,10 @@ public class BouttonsControl : MonoBehaviour
 
     public void CheckButtonValueSecondBg()
     {
+
+        // Update for score depends on :
+        // Need to import these parameters : Time, Difficulty
+        // to compute the score par ex : score = time * Difficulty * cst
         if (btn[selected_answer].GetComponentInChildren<Text>().text == answer.ToString())
         {
             ScoreScript.scorevalue += 10;
