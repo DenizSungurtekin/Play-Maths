@@ -1,10 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using System.Net.Sockets;
+using System;
 
 public class CameraControl : MonoBehaviour
 {
+
+    public string ip = "127.0.0.1";
+    public int port = 60000;
+    public Socket client;
+    [SerializeField]
+    public float[] dataIn;
 
     public Transform target;
     public Transform bg1;
@@ -60,7 +67,11 @@ public class CameraControl : MonoBehaviour
 
             compt++;
             SwitchBac();
-
+            dataIn = ServerRequest();
+            foreach (var item in dataIn)
+            {
+                Debug.Log(item.ToString());
+            }
         }
 
         if ((ligneInvisible.position.y >= firstText.position.y) && (textCompt % 2 == 0))
@@ -88,5 +99,49 @@ public class CameraControl : MonoBehaviour
 
 
 
+    }
+
+    public float[] ServerRequest()
+    {
+        Debug.Log("serveur request");
+        //print("request");
+        //this.dataOut = dataOut; //debugging
+        this.dataIn = Receive(); //debugging
+        return this.dataIn;
+    }
+
+    /// <summary> 
+    /// Send data to port, receive data from port.
+    /// </summary>
+    /// <param name="dataOut">Data to send</param>
+    /// <returns></returns>
+    public float[] Receive()
+    {
+        //initialize socket
+        float[] floatsReceived;
+        client = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+        client.Connect(ip, port);
+        if (!client.Connected)
+        {
+            Debug.LogError("Connection Failed");
+            return null;
+        }
+
+        //convert floats to bytes, send to port
+        // var byteArray = new byte[dataOut.Length * 4];
+        //Buffer.BlockCopy(dataOut, 0, byteArray, 0, byteArray.Length);
+        //client.Send(byteArray);
+
+        //allocate and receive bytes
+        byte[] bytes = new byte[4000];
+        int idxUsedBytes = client.Receive(bytes);
+        //print(idxUsedBytes + " new bytes received.");
+
+        //convert bytes to floats
+        floatsReceived = new float[idxUsedBytes / 4];
+        Buffer.BlockCopy(bytes, 0, floatsReceived, 0, idxUsedBytes);
+
+        client.Close();
+        return floatsReceived;
     }
 }
