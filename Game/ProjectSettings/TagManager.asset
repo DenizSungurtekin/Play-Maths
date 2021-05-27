@@ -8,6 +8,7 @@ TagManager:
   - buttons
   - verticalmvt
   - heart
+  - ScorecardText
   layers:
   - Default
   - TransparentFX

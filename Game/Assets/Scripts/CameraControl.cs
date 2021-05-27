@@ -21,7 +21,7 @@ public class CameraControl : MonoBehaviour
     private float size,data,constante;
     public string operation1;
     public string operation2;
-    
+
 
 
     // difficult and scrolling speed should be defined here
@@ -43,7 +43,7 @@ public class CameraControl : MonoBehaviour
         player.ms = (float)(1.0 + (2.0 / 9.0) * (difficulty - 1.0));
         size = bg1.GetComponent<BoxCollider2D>().size.y;
         //output = output_start + ((output_end - output_start) / (input_end - input_start)) * (input - input_start)
-        // output = 1 + ((3-1) / (10 - 1)) * (difficulté - 1))
+        // output = 1 + ((3-1) / (10 - 1)) * (difficultï¿½ - 1))
     }
 
     // Update is called once per frame
@@ -77,8 +77,8 @@ public class CameraControl : MonoBehaviour
                 operation1 = equationControl.op1;
                 bouttonsControl.ChangeBoutonsValueFirstBg(operation1);
             }*/
-            dataIn = ServerRequest();
-            data = dataIn[0];
+            /*dataIn = ServerRequest();
+            data = dataIn[0]; */
             //Debug.Log(data);
 
             updateDifficulty(data);
@@ -131,7 +131,7 @@ public class CameraControl : MonoBehaviour
         return this.dataIn;
     }
 
-    /// <summary> 
+    /// <summary>
     /// Send data to port, receive data from port.
     /// </summary>
     /// <param name="dataOut">Data to send</param>

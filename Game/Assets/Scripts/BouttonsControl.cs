@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class BouttonsControl : MonoBehaviour
 {
@@ -195,8 +196,10 @@ public class BouttonsControl : MonoBehaviour
                 ScoreScript.scorevalue = 0;
             }
             else { ScoreScript.scorevalue -= 10 * (11 - diff); }
-   
+
         }
+
+        if (vie_perdu == 4) { SceneManager.LoadScene(2); } // Game Over : Scene redirect to the Scorecard Scene
 
 
     }
@@ -206,7 +209,7 @@ public class BouttonsControl : MonoBehaviour
 
 
     equationControl = GameObject.FindGameObjectWithTag("equations").GetComponent<EquationControl>();
-        
+
         int diff = (int)difficulty;
         // Update for score depends on :
         // Need to import these parameters : Time, Difficulty
@@ -221,11 +224,16 @@ public class BouttonsControl : MonoBehaviour
             hearts[vie_perdu].SetActive(false);
             vie_perdu += 1;
             SoundManagerScript.PlaySound("bad");
+
+
+
             if ((ScoreScript.scorevalue - (10 * (11 - diff))) < 0)
             {
                 ScoreScript.scorevalue = 0;
             }
             else { ScoreScript.scorevalue -= 10 * (11 - diff); }
+
+            if (vie_perdu == 4) { SceneManager.LoadScene(2); } // Game Over : Scene redirect to the Scorecard Scene
 
         }
 
