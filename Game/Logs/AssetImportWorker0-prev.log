@@ -12,139 +12,337 @@ AssetImportWorker0
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-63598
+63642
 Successfully changed project path to: /Users/sajay/Documents/UNIGE/MASTER/Semester 2/IMA - Interaction Multi Modal/Play-Maths/Game
 /Users/sajay/Documents/UNIGE/MASTER/Semester 2/IMA - Interaction Multi Modal/Play-Maths/Game
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 58.09 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 71.79 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.3f1 (76626098c1c4)
 [Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/2020.3.3f1/Unity.app/Contents/Resources/UnitySubsystems
 [Subsystems] Discovering subsystems at path /Users/sajay/Documents/UNIGE/MASTER/Semester 2/IMA - Interaction Multi Modal/Play-Maths/Game/Assets
 GfxDevice: creating device client; threaded=0
-2021-05-28 11:36:55.878 Unity[86805:8768695] Color LCD preferred device: Intel(R) Iris(TM) Plus Graphics 655 (low power)
-2021-05-28 11:36:55.878 Unity[86805:8768695] Metal devices available: 1
-2021-05-28 11:36:55.878 Unity[86805:8768695] 0: Intel(R) Iris(TM) Plus Graphics 655 (low power)
-2021-05-28 11:36:55.879 Unity[86805:8768695] Using device Intel(R) Iris(TM) Plus Graphics 655 (low power)
+2021-05-28 11:51:10.276 Unity[87165:8782660] Color LCD preferred device: Intel(R) Iris(TM) Plus Graphics 655 (low power)
+2021-05-28 11:51:10.276 Unity[87165:8782660] Metal devices available: 1
+2021-05-28 11:51:10.276 Unity[87165:8782660] 0: Intel(R) Iris(TM) Plus Graphics 655 (low power)
+2021-05-28 11:51:10.277 Unity[87165:8782660] Using device Intel(R) Iris(TM) Plus Graphics 655 (low power)
 Initializing Metal device caps: Intel(R) Iris(TM) Plus Graphics 655
 Initialize mono
 Mono path[0] = '/Applications/Unity/Hub/Editor/2020.3.3f1/Unity.app/Contents/Managed'
 Mono path[1] = '/Applications/Unity/Hub/Editor/2020.3.3f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = '/Applications/Unity/Hub/Editor/2020.3.3f1/Unity.app/Contents/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56805
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56165
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: /Applications/Unity/Hub/Editor/2020.3.3f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
-Registered in 0.002476 seconds.
+Registered in 0.001721 seconds.
 Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 44.36 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 61.58 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.982 seconds
+- Completed reload, in  2.576 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.001228 seconds.
+Registered in 0.001246 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 49.94 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 44.74 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.219 seconds
+- Completed reload, in  1.176 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launching external process: /Applications/Unity/Hub/Editor/2020.3.3f1/Unity.app/Contents/Tools/UnityShaderCompiler
-Launched and connected shader compiler UnityShaderCompiler after 0.01 seconds
+Launched and connected shader compiler UnityShaderCompiler after 0.02 seconds
 Refreshing native plugins compatible for Editor in 0.48 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1865 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 150.3 MB.
-System memory in use after: 150.2 MB.
+System memory in use before: 150.4 MB.
+System memory in use after: 150.3 MB.
 
 Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 2308.
-Total: 2.661892 ms (FindLiveObjects: 0.223146 ms CreateObjectMapping: 0.082288 ms MarkObjects: 2.211625 ms  DeleteObjects: 0.143709 ms)
+Total: 3.285503 ms (FindLiveObjects: 0.347053 ms CreateObjectMapping: 0.079382 ms MarkObjects: 2.674134 ms  DeleteObjects: 0.183609 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/Scenes/ScoreCard.unity
-  artifactKey: Guid(f4e027fc9fa7d4bb3a48ed99b000ed2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/ScoreCard.unity using Guid(f4e027fc9fa7d4bb3a48ed99b000ed2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '401284a63082451c42f6b9b7fb9938e1') in 0.013375 seconds
-  Import took 0.018360 seconds .
+  path: Assets/UI_Buttons_Pack2/Button_3_Pack2.wav
+  artifactKey: Guid(34230dbfa454a924bb34d47e8fa330b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI_Buttons_Pack2/Button_3_Pack2.wav using Guid(34230dbfa454a924bb34d47e8fa330b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c3b4766dee3ea3a8e8eba530d49356b') in 1.567603 seconds
+  Import took 1.572506 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 16.620175 seconds.
-  path: Assets/Scripts/MainMenu.cs
-  artifactKey: Guid(3a3a0bc3bce4b4e5f82cb7112f2c1f82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/MainMenu.cs using Guid(3a3a0bc3bce4b4e5f82cb7112f2c1f82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e8f4739a7505aae4c02d6b1a626e98a8') in 0.759798 seconds
-  Import took 0.764111 seconds .
+  Time since last request: 0.000275 seconds.
+  path: Assets/UI_Buttons_Pack2/Button_2_Pack2.wav
+  artifactKey: Guid(438aa3c1164a6b04c86363d56d293891) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI_Buttons_Pack2/Button_2_Pack2.wav using Guid(438aa3c1164a6b04c86363d56d293891) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f5d350fc2e35eae7b4f1947d45c306f') in 0.006872 seconds
+  Import took 0.009762 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 41.345193 seconds.
-  path: Assets/Scripts/ScoreCard.cs
-  artifactKey: Guid(11cdebca9bd1947e9a2d50b7a39a9a7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/ScoreCard.cs using Guid(11cdebca9bd1947e9a2d50b7a39a9a7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5ee4174c4de4896f6eac239a46475b96') in 0.010389 seconds
-  Import took 0.014237 seconds .
+  Time since last request: 3.322816 seconds.
+  path: Assets/UI_Buttons_Pack2/Button_4_Pack2.wav
+  artifactKey: Guid(0b089b225b9095444afd110f536faa69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI_Buttons_Pack2/Button_4_Pack2.wav using Guid(0b089b225b9095444afd110f536faa69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e05a1c9e4995050f6fc29d998e341fff') in 0.012138 seconds
+  Import took 0.021591 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 60.566445 seconds.
-  path: Assets/Scripts/PlayAgain.cs
-  artifactKey: Guid(f98958dfdeb1043deb50b30fdefd9fd4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/PlayAgain.cs using Guid(f98958dfdeb1043deb50b30fdefd9fd4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b010aa5902074bb211147addacae21a7') in 0.002988 seconds
-  Import took 0.006839 seconds .
+  Time since last request: 1.772845 seconds.
+  path: Assets/UI_Buttons_Pack2/Button_5_Pack2.wav
+  artifactKey: Guid(a9041f15a000b7748bc04d401019aa86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI_Buttons_Pack2/Button_5_Pack2.wav using Guid(a9041f15a000b7748bc04d401019aa86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc18d2d11df15ed40010b742596fd68b') in 0.012438 seconds
+  Import took 0.016809 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 8.513607 seconds.
-  path: Assets/Scripts/CameraControl.cs
-  artifactKey: Guid(d7a7c45bd292f450d8f8c43acc21f8ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/CameraControl.cs using Guid(d7a7c45bd292f450d8f8c43acc21f8ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '608189c94bcff34ff701060fb725ca33') in 0.002084 seconds
-  Import took 0.005630 seconds .
+  Time since last request: 1.360893 seconds.
+  path: Assets/UI_Buttons_Pack2/Button_6_Pack2.wav
+  artifactKey: Guid(e561c9f0cfea72e4db68ca897eb8bf2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI_Buttons_Pack2/Button_6_Pack2.wav using Guid(e561c9f0cfea72e4db68ca897eb8bf2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed6d71ea49af86440c60d51d5ef11a03') in 0.016867 seconds
+  Import took 0.020817 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 1.184835 seconds.
-  path: Assets/Scripts/CameraControl.cs
-  artifactKey: Guid(d7a7c45bd292f450d8f8c43acc21f8ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/CameraControl.cs using Guid(d7a7c45bd292f450d8f8c43acc21f8ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '608189c94bcff34ff701060fb725ca33') in 0.003151 seconds
-  Import took 0.006365 seconds .
+  Time since last request: 1.250497 seconds.
+  path: Assets/UI_Buttons_Pack2/Button_8_Pack2.wav
+  artifactKey: Guid(2a4aaac7e3d8dc84facd026a69574973) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI_Buttons_Pack2/Button_8_Pack2.wav using Guid(2a4aaac7e3d8dc84facd026a69574973) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6909894a7f34ce1ea0b3dbde4730bc8c') in 0.010056 seconds
+  Import took 0.016109 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 50.460298 seconds.
-  path: Assets/Scripts/BouttonsControl.cs
-  artifactKey: Guid(b90a3a70b9ad3c94e900c85f8ad6c138) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/BouttonsControl.cs using Guid(b90a3a70b9ad3c94e900c85f8ad6c138) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cddb2c135deefdbdf409923d92576e4f') in 0.001973 seconds
-  Import took 0.005248 seconds .
+  Time since last request: 3.879762 seconds.
+  path: Assets/UI_Buttons_Pack2/Button_7_Pack2.wav
+  artifactKey: Guid(5488401fda00c0c4ab275a648ee22f05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI_Buttons_Pack2/Button_7_Pack2.wav using Guid(5488401fda00c0c4ab275a648ee22f05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17b6f51a308bf1cae921e046ee633240') in 0.008981 seconds
+  Import took 0.013452 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.003050 seconds.
-  path: Assets/Scripts/BouttonsControl.cs
-  artifactKey: Guid(b90a3a70b9ad3c94e900c85f8ad6c138) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/BouttonsControl.cs using Guid(b90a3a70b9ad3c94e900c85f8ad6c138) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cddb2c135deefdbdf409923d92576e4f') in 0.001256 seconds
-  Import took 0.004446 seconds .
+  Time since last request: 19.303676 seconds.
+  path: Assets/UI_Buttons_Pack2/Button_9_Pack2.wav
+  artifactKey: Guid(d969622a0d3401e44afa43f7e7eb5d3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI_Buttons_Pack2/Button_9_Pack2.wav using Guid(d969622a0d3401e44afa43f7e7eb5d3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ade08501a6313cb734f663d71be4407b') in 0.010640 seconds
+  Import took 0.015369 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 42.517700 seconds.
-  path: Assets/Scripts/SoundManagerScript.cs
-  artifactKey: Guid(7514d48f17b24dd498e32a0af096ee37) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/SoundManagerScript.cs using Guid(7514d48f17b24dd498e32a0af096ee37) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '294418cff5cecba1518c37972aa98817') in 0.002269 seconds
-  Import took 0.005500 seconds .
+  Time since last request: 5.668864 seconds.
+  path: Assets/UI_Buttons_Pack2/Button_11_Pack2.wav
+  artifactKey: Guid(d825a8daf3055a6469b2adf50ff04eb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI_Buttons_Pack2/Button_11_Pack2.wav using Guid(d825a8daf3055a6469b2adf50ff04eb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b2fda9cd156c353cfba11308756fc707') in 0.011845 seconds
+  Import took 0.016667 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.287009 seconds.
+  path: Assets/UI_Buttons_Pack2/Button_12_Pack2.wav
+  artifactKey: Guid(c80e1e0c2aff10746ac5fa8b1f4c1680) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI_Buttons_Pack2/Button_12_Pack2.wav using Guid(c80e1e0c2aff10746ac5fa8b1f4c1680) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86ae49f7cfc5724de246b0e89707882d') in 0.008926 seconds
+  Import took 0.013643 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.262569 seconds.
+  path: Assets/UI_Buttons_Pack2/Button_13_Pack2.wav
+  artifactKey: Guid(12f37011aefdb604bb89de99e954dc31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI_Buttons_Pack2/Button_13_Pack2.wav using Guid(12f37011aefdb604bb89de99e954dc31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7135812ca828dbdcdaaf5b14ac0eae93') in 0.024430 seconds
+  Import took 0.030321 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003415 seconds.
+  path: Assets/UI_Buttons_Pack2/Button_13_Pack2.wav
+  artifactKey: Guid(12f37011aefdb604bb89de99e954dc31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI_Buttons_Pack2/Button_13_Pack2.wav using Guid(12f37011aefdb604bb89de99e954dc31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7135812ca828dbdcdaaf5b14ac0eae93') in 0.028748 seconds
+  Import took 0.033170 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.057571 seconds.
+  path: Assets/UI_Buttons_Pack2/Button_14_Pack2.wav
+  artifactKey: Guid(9d255dbf95218104a87ea1459a9c60aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI_Buttons_Pack2/Button_14_Pack2.wav using Guid(9d255dbf95218104a87ea1459a9c60aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dd4b1e381deafd4d51d5d937f5b66356') in 0.028092 seconds
+  Import took 0.033190 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.945546 seconds.
+  path: Assets/UI_Buttons_Pack2/Button_15_Pack2.wav
+  artifactKey: Guid(58de79d478d179d48914882b9b61794c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI_Buttons_Pack2/Button_15_Pack2.wav using Guid(58de79d478d179d48914882b9b61794c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '69fc074a43e296f6260023e666f28ddf') in 0.016652 seconds
+  Import took 0.021802 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.687638 seconds.
+  path: Assets/UI_Buttons_Pack2/Button_16_Pack2.wav
+  artifactKey: Guid(21f0e19cc37c22e499d86284b29a7295) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI_Buttons_Pack2/Button_16_Pack2.wav using Guid(21f0e19cc37c22e499d86284b29a7295) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '03cdda29d6939f43283f4203d610beba') in 0.012508 seconds
+  Import took 0.021131 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 76.729590 seconds.
+  path: Assets/Scripts/testSend.py
+  artifactKey: Guid(535e66057de665d40850312cf9537d8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/testSend.py using Guid(535e66057de665d40850312cf9537d8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd672970e381928ce1708f87297209e93') in 1.881649 seconds
+  Import took 1.885225 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 102.607897 seconds.
+  path: Assets/UI_Buttons_Pack2/Button_21_Pack2.wav
+  artifactKey: Guid(9e464113a241af045a2d30b3bf276d8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI_Buttons_Pack2/Button_21_Pack2.wav using Guid(9e464113a241af045a2d30b3bf276d8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f034c4966e4d0927f94de272c06e310') in 0.024265 seconds
+  Import took 0.028884 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.006053 seconds.
+  path: Assets/UI_Buttons_Pack2/Button_21_Pack2.wav
+  artifactKey: Guid(9e464113a241af045a2d30b3bf276d8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI_Buttons_Pack2/Button_21_Pack2.wav using Guid(9e464113a241af045a2d30b3bf276d8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f034c4966e4d0927f94de272c06e310') in 0.011543 seconds
+  Import took 0.015287 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 18.994203 seconds.
+  path: Assets/UI_Buttons_Pack2/Button_28_Pack2.wav
+  artifactKey: Guid(e6db1b555202f8a41a87ad59b9c0334f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI_Buttons_Pack2/Button_28_Pack2.wav using Guid(e6db1b555202f8a41a87ad59b9c0334f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a66c171ced2f21452a548103720def5b') in 0.017160 seconds
+  Import took 0.022838 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.088284 seconds.
+  path: Assets/UI_Buttons_Pack2/Button_27_Pack2.wav
+  artifactKey: Guid(c34c90560d26e434ab29efd33e2b7fa2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI_Buttons_Pack2/Button_27_Pack2.wav using Guid(c34c90560d26e434ab29efd33e2b7fa2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '70d9086d773f537132ad4597bda7e1b5') in 0.021619 seconds
+  Import took 0.026041 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001193 seconds.
+  path: Assets/UI_Buttons_Pack2/Button_27_Pack2.wav
+  artifactKey: Guid(c34c90560d26e434ab29efd33e2b7fa2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI_Buttons_Pack2/Button_27_Pack2.wav using Guid(c34c90560d26e434ab29efd33e2b7fa2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '70d9086d773f537132ad4597bda7e1b5') in 0.037298 seconds
+  Import took 0.041855 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.576809 seconds.
+  path: Assets/UI_Buttons_Pack2/Button_26_Pack2.wav
+  artifactKey: Guid(a00a27dacfcc94b4abbe9ec734a8abea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI_Buttons_Pack2/Button_26_Pack2.wav using Guid(a00a27dacfcc94b4abbe9ec734a8abea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a953c739e29f356ded1bb160fd5ae8d0') in 0.011458 seconds
+  Import took 0.015875 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.217646 seconds.
+  path: Assets/UI_Buttons_Pack2/Button_18_Pack2.wav
+  artifactKey: Guid(45dd760e7266b434688409fe32085836) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI_Buttons_Pack2/Button_18_Pack2.wav using Guid(45dd760e7266b434688409fe32085836) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca82e952390ef92fe6fadc8d4ce64556') in 0.010230 seconds
+  Import took 0.014381 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 59.951598 seconds.
+  path: Assets/UI_Buttons_Pack2/Button_30_Pack2.wav
+  artifactKey: Guid(6362dc82c01266f4099527e462c7538b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI_Buttons_Pack2/Button_30_Pack2.wav using Guid(6362dc82c01266f4099527e462c7538b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1279ac41767151bec3e32c5d38708f8d') in 0.020703 seconds
+  Import took 0.026036 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.247049 seconds.
+  path: Assets/UI_Buttons_Pack2/Button_20_Pack2.wav
+  artifactKey: Guid(60094fbc1aa84c343b9512f9e3d09f14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI_Buttons_Pack2/Button_20_Pack2.wav using Guid(60094fbc1aa84c343b9512f9e3d09f14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '73930d2aa9d372354ecfa85158718b6a') in 0.019371 seconds
+  Import took 0.024834 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 31.575441 seconds.
+  path: Assets/Resources/gameover.wav
+  artifactKey: Guid(45dd760e7266b434688409fe32085836) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/gameover.wav using Guid(45dd760e7266b434688409fe32085836) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe4b3b5a05204e44be854af9ba43c437') in 0.026869 seconds
+  Import took 0.031287 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.001817 seconds.
+Registered in 0.001616 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.46 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.196 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.46 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1847 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 161.3 MB.
+System memory in use after: 161.3 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2321.
+Total: 2.143165 ms (FindLiveObjects: 0.282880 ms CreateObjectMapping: 0.066823 ms MarkObjects: 1.695651 ms  DeleteObjects: 0.096810 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 75.558649 seconds.
+  path: Assets/Scripts/SoundManagerScript.cs
+  artifactKey: Guid(7514d48f17b24dd498e32a0af096ee37) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/SoundManagerScript.cs using Guid(7514d48f17b24dd498e32a0af096ee37) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '14a7eef799c11b22cffbd0624da3aba8') in 0.403647 seconds
+  Import took 0.407909 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001294 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.45 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.072 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.40 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1847 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 165.8 MB.
+System memory in use after: 165.8 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2325.
+Total: 2.254840 ms (FindLiveObjects: 0.215026 ms CreateObjectMapping: 0.064743 ms MarkObjects: 1.865630 ms  DeleteObjects: 0.108378 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 52.775317 seconds.
+  path: Assets/Scripts/BouttonsControl.cs
+  artifactKey: Guid(b90a3a70b9ad3c94e900c85f8ad6c138) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/BouttonsControl.cs using Guid(b90a3a70b9ad3c94e900c85f8ad6c138) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c21e3b112f827affd894345783d02053') in 0.004319 seconds
+  Import took 0.007650 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002748 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for OSXStandalone target not found
 Refreshing native plugins compatible for Editor in 0.44 ms, found 2 plugins.
@@ -153,14 +351,14 @@ Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.176 seconds
+- Completed reload, in  1.105 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.40 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.39 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1847 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 153.3 MB.
-System memory in use after: 153.3 MB.
+System memory in use before: 166.1 MB.
+System memory in use after: 166.0 MB.
 
-Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2312.
-Total: 2.411381 ms (FindLiveObjects: 0.355268 ms CreateObjectMapping: 0.089103 ms MarkObjects: 1.853887 ms  DeleteObjects: 0.112382 ms)
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2329.
+Total: 2.152863 ms (FindLiveObjects: 0.184793 ms CreateObjectMapping: 0.063293 ms MarkObjects: 1.776571 ms  DeleteObjects: 0.126742 ms)
 

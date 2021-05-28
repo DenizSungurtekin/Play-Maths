@@ -7,7 +7,7 @@ using System;
 public class CameraControl : MonoBehaviour
 {
 
-    public string ip = "127.0.0.1";
+    public string ip = "192.168.1.2";//IP of the raspberry
     public int port = 60000;
     public Socket client;
     [SerializeField]
@@ -59,24 +59,7 @@ public class CameraControl : MonoBehaviour
             bg1.position = new Vector3(bg1.position.x, bg2.position.y + size, bg1.position.z);
             Debug.Log(difficulty);
 
-
-
-
-
-            //bouttonsControl = GameObject.FindGameObjectWithTag("buttons").GetComponent<BouttonsControl>();
-
-
-            /*
-            if (compt % 2 == 0)
-            {
-                operation2 = equationControl.op2;
-                bouttonsControl.ChangeBoutonsValueSecondBg(operation2);
-            }
-            else
-            {
-                operation1 = equationControl.op1;
-                bouttonsControl.ChangeBoutonsValueFirstBg(operation1);
-            }*/
+            // UNCOMMENT IF THERE IS THE RASBERRYPY
             /*dataIn = ServerRequest();
             data = dataIn[0]; */
             //Debug.Log(data);
@@ -87,11 +70,6 @@ public class CameraControl : MonoBehaviour
             compt++;
             SwitchBac();
 
-
-            /* foreach (var item in dataIn)
-             {
-                 Debug.Log(item.ToString());
-             }*/
 
         }
 
@@ -117,8 +95,6 @@ public class CameraControl : MonoBehaviour
         Transform temp = bg1;
         bg1 = bg2;
         bg2 = temp;
-
-
 
     }
 
@@ -148,15 +124,9 @@ public class CameraControl : MonoBehaviour
             return null;
         }
 
-        //convert floats to bytes, send to port
-        // var byteArray = new byte[dataOut.Length * 4];
-        //Buffer.BlockCopy(dataOut, 0, byteArray, 0, byteArray.Length);
-        //client.Send(byteArray);
-
         //allocate and receive bytes
         byte[] bytes = new byte[4000];
         int idxUsedBytes = client.Receive(bytes);
-        //print(idxUsedBytes + " new bytes received.");
 
         //convert bytes to floats
         floatsReceived = new float[idxUsedBytes / 4];
