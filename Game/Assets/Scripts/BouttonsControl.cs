@@ -199,7 +199,10 @@ public class BouttonsControl : MonoBehaviour
 
         }
 
-        if (vie_perdu == 4) { SceneManager.LoadScene(2); } // Game Over : Scene redirect to the Scorecard Scene
+        if (vie_perdu == 4) {
+            SoundManagerScript.PlaySound("gameover");
+            SceneManager.LoadScene(2);
+        } // Game Over : Scene redirect to the Scorecard Scene
 
 
     }
@@ -233,7 +236,11 @@ public class BouttonsControl : MonoBehaviour
             }
             else { ScoreScript.scorevalue -= 10 * (11 - diff); }
 
-            if (vie_perdu == 4) { SceneManager.LoadScene(2); } // Game Over : Scene redirect to the Scorecard Scene
+            if (vie_perdu == 4) {
+                SoundManagerScript.PlaySound("gameover");
+                SceneManager.LoadScene(2);
+
+            } // Game Over : Scene redirect to the Scorecard Scene
 
         }
 
