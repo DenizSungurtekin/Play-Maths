@@ -32,23 +32,23 @@ public class BouttonsControl : MonoBehaviour
         // determine which button is pressed
         btn[selected_answer].GetComponentInChildren<Text>().color = Color.green;
 
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        if (Input.GetKeyDown(KeyCode.Alpha1) | Input.GetKeyDown(KeyCode.A) | Input.GetKeyDown(KeyCode.LeftArrow))
         {
             btn[selected_answer].GetComponentInChildren<Text>().color = Color.white;
             selected_answer = 0;
         }
-        if (Input.GetKeyDown(KeyCode.Alpha2))
+        if (Input.GetKeyDown(KeyCode.Alpha2) | Input.GetKeyDown(KeyCode.S) | Input.GetKeyDown(KeyCode.UpArrow))
         {
             btn[selected_answer].GetComponentInChildren<Text>().color = Color.white;
             selected_answer = 1;
         }
-        if (Input.GetKeyDown(KeyCode.Alpha3))
+        if (Input.GetKeyDown(KeyCode.Alpha3) | Input.GetKeyDown(KeyCode.D) | Input.GetKeyDown(KeyCode.RightArrow))
         {
             btn[selected_answer].GetComponentInChildren<Text>().color = Color.white;
             selected_answer = 2;
 
         }
-        if (Input.GetKeyDown(KeyCode.Alpha4))
+        if (Input.GetKeyDown(KeyCode.Alpha4) | Input.GetKeyDown(KeyCode.F) | Input.GetKeyDown(KeyCode.DownArrow))
         {
             btn[selected_answer].GetComponentInChildren<Text>().color = Color.white;
             selected_answer = 3;
