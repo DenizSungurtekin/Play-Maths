@@ -2955,7 +2955,7 @@ GameObject:
   - component: {fileID: 2020427341}
   m_Layer: 5
   m_Name: Score
-  m_TagString: Untagged
+  m_TagString: score
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3033,3 +3033,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb523d771421845cab74654dcdc9a7e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  score: {fileID: 2020427339}

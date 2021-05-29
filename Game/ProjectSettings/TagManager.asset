@@ -9,6 +9,7 @@ TagManager:
   - verticalmvt
   - heart
   - ScorecardText
+  - score
   layers:
   - Default
   - TransparentFX

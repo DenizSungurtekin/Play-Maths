@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class SoundManagerScript : MonoBehaviour
 {
-
     public static AudioClip good, bad,gameover;
     static AudioSource audioSrc;
     // Start is called before the first frame update
@@ -14,7 +13,6 @@ public class SoundManagerScript : MonoBehaviour
         bad = Resources.Load<AudioClip>("bad");
         gameover = Resources.Load<AudioClip>("gameover");
         audioSrc = GetComponent<AudioSource>();
-
     }
 
     // Update is called once per frame

@@ -5,14 +5,10 @@ using UnityEngine.UI;
 
 public class Music : MonoBehaviour
 {
-
     public Button musicBoutonOn;
     public Button musicBoutonOff;
-
     public GameObject button;
     public GameObject button1;
-
-
 
     // Start is called before the first frame update
     void Start()
@@ -29,15 +25,13 @@ public class Music : MonoBehaviour
         //Add Event onClick
         btn.onClick.AddListener(Mute);
         btnOff.onClick.AddListener(UnMute);
-
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-        
     }
+
     //Mute sound and activate the unmute button
     public void Mute()
     {
@@ -52,7 +46,6 @@ public class Music : MonoBehaviour
     {
         button1.SetActive(false);
         button.SetActive(true);
-
         AudioListener.volume = 1;   
     }
 }

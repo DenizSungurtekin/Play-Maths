@@ -8,10 +8,11 @@ public class ScoreScript : MonoBehaviour
 
     public static int scorevalue = 0 ;
     public static int scorefinal ;
-    Text score;
+    public Text score;
     // Start is called before the first frame update
     void Start()
     {
+        scorevalue = 0;
         score = GetComponent<Text>();
     }
 

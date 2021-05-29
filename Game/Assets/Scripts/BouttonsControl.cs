@@ -3,34 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.Linq;
 
 public class BouttonsControl : MonoBehaviour
 {
-
-
     public GameObject heart1;
     public GameObject heart2;
     public GameObject heart3;
     public GameObject heart4;
 
-
-
     public int position_answer,selected_answer,min_range,max_range, answer,one,vie_perdu;
     public EquationControl equationControl;
     GameObject[] btn;
     GameObject[] hearts;
+    
 
-
-
-    // Start is called before the first frame update
     void Start()
     {
-
         vie_perdu = 0;
         hearts = GameObject.FindGameObjectsWithTag("heart");
         btn = GameObject.FindGameObjectsWithTag("buttons");
         selected_answer = 0; //initial value if no button are selected
-
     }
 
     // Update is called once per frame
@@ -39,19 +32,15 @@ public class BouttonsControl : MonoBehaviour
         // determine which button is pressed
         btn[selected_answer].GetComponentInChildren<Text>().color = Color.green;
 
-        //Debug.Log("Text: " + selected_answer);
-
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             btn[selected_answer].GetComponentInChildren<Text>().color = Color.white;
             selected_answer = 0;
-
         }
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             btn[selected_answer].GetComponentInChildren<Text>().color = Color.white;
             selected_answer = 1;
-
         }
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
@@ -65,21 +54,13 @@ public class BouttonsControl : MonoBehaviour
             selected_answer = 3;
 
         }
-
-
-
-
-
     }
 
     public void ChangeBoutonsValueFirstBg(int answer)
     {
         GameObject[] btn = GameObject.FindGameObjectsWithTag("buttons");
-
+        int[] boutton_values = new int[4];
         position_answer = Random.Range(0, 3);
-        //equationControl = GameObject.FindGameObjectWithTag("equations").GetComponent<EquationControl>();
-
-
 
         min_range = answer - 5;
         max_range = answer + 5;
@@ -88,33 +69,23 @@ public class BouttonsControl : MonoBehaviour
             {
                 if (i == position_answer)
                 {
-                    //we check for location value and the assign it to the corresponding ans button
+                    //we check for location value and assign it to the corresponding ans button
                     btn[i].GetComponentInChildren<Text>().text = "" + answer;
-
+                    boutton_values[i] = answer;
                 }
                 else
                 {
-                    //for other ans button we assign random values
+                    //for other ans button we assign random values in a specific range from the answer
                     one = Random.Range(min_range, max_range);
                     btn[i].GetComponentInChildren<Text>().text = "" + one;
 
-
-                    while (btn[i].GetComponentInChildren<Text>().text == "" + answer)
+                    while (btn[i].GetComponentInChildren<Text>().text == "" + answer | boutton_values.Contains(one) )
                     {
-                        //we make sure that only one button has answer values
-                        btn[i].GetComponentInChildren<Text>().text = "" + Random.Range(min_range, max_range);
+                    one = Random.Range(min_range, max_range);
+                    //we make sure that only one button has answer values
+                    btn[i].GetComponentInChildren<Text>().text = "" + one;
                     }
-
-                if (i > 0)
-                {
-                    while (btn[i - 1].GetComponentInChildren<Text>().text == "" + one)
-                    {
-                        //we make sure that the previous value is not the same
-                        one = Random.Range(min_range, max_range);
-                        btn[i].GetComponentInChildren<Text>().text = "" + one;
-                    }
-                }
-
+                boutton_values[i] = one;
 
                 }
 
@@ -124,11 +95,8 @@ public class BouttonsControl : MonoBehaviour
     public void ChangeBoutonsValueSecondBg(int answer)
     {
         GameObject[] btn = GameObject.FindGameObjectsWithTag("buttons");
-
+        int[] boutton_values = new int[4];
         position_answer = Random.Range(0, 3);
-
-
-
 
         min_range = answer - 5;
         max_range = answer + 5;
@@ -137,37 +105,25 @@ public class BouttonsControl : MonoBehaviour
         {
             if (i == position_answer)
             {
-                //we check for location value and the assign it to the corresponding ans button
+                //we check for location value and assign it to the corresponding ans button
                 btn[i].GetComponentInChildren<Text>().text = "" + answer;
-
+                boutton_values[i] = answer;
             }
             else
             {
-                //for other ans button we assign random values
-
+                //for other ans button we assign random values in a specific range from the answer
                 one = Random.Range(min_range, max_range);
                 btn[i].GetComponentInChildren<Text>().text = "" + one;
 
-
-                while (btn[i].GetComponentInChildren<Text>().text == "" + answer)
+                while (btn[i].GetComponentInChildren<Text>().text == "" + answer | boutton_values.Contains(one))
                 {
+                    one = Random.Range(min_range, max_range);
                     //we make sure that only one button has answer values
-                    btn[i].GetComponentInChildren<Text>().text = "" + Random.Range(min_range, max_range);
+                    btn[i].GetComponentInChildren<Text>().text = "" + one;
                 }
-
-                if (i > 0)
-                {
-                    while (btn[i - 1].GetComponentInChildren<Text>().text == "" + one)
-                    {
-                        //we make sure that the previous value is not the same
-                        one = Random.Range(min_range, max_range);
-                        btn[i].GetComponentInChildren<Text>().text = "" + one;
-                    }
-                }
-
+                boutton_values[i] = one;
 
             }
-
         }
     }
 
@@ -209,7 +165,6 @@ public class BouttonsControl : MonoBehaviour
 
     public void CheckButtonValueSecondBg(float difficulty)
     {
-
 
     equationControl = GameObject.FindGameObjectWithTag("equations").GetComponent<EquationControl>();
 

@@ -4,29 +4,24 @@ using UnityEngine;
 
 public class EquationControl : MonoBehaviour
 {
-
     public string[] operations = {" + ", " - "};
     public TextMesh eq1;
     public TextMesh eq2;
     public string[] chosenOperations;
     public int randomIndex;
-
     public string op1, op2,op3,op4;
     public int a,b,c,d,a2,c2;
     public int low,high, answer2,answer1, answer;
-    // Start is called before the first frame update
 
     BouttonsControl bouttonsControl;
+
     void Start()
     {
-        
         eq1 = GameObject.Find("bg_1_text").GetComponent<TextMesh>();
         eq2 =  GameObject.Find("bg_2_text").GetComponent<TextMesh>();
 
-
         a = Random.Range(1,10);
         b = Random.Range(1,10);
-
         c = Random.Range(1,10);
         d = Random.Range(1,10);
 
@@ -35,11 +30,8 @@ public class EquationControl : MonoBehaviour
         randomIndex = Random.Range(0, 2);
         op2 = operations[randomIndex];
 
-
-
         eq1.text = a.ToString() + op1 + b.ToString() + " = ?";
         eq2.text = c.ToString() + op2 + d.ToString() + " = ?";
-
 
         if (op1 == " + ")
         {
@@ -55,7 +47,6 @@ public class EquationControl : MonoBehaviour
         {
             answer2 = c + d;
         }
-
         else
         {
             answer2 = c - d;
@@ -69,9 +60,6 @@ public class EquationControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        // eq1.text =  a.ToString() + " + " + b.ToString() + " = ?";
-        // eq2.text =  c.ToString() + " + " + d.ToString() + " = ?";
     }
 
     // Update equation here : parameters : compt, difficulty
@@ -81,9 +69,7 @@ public class EquationControl : MonoBehaviour
         low = 0;
         high = 10+diff;
        
-
-
-        if (difficulty < 8)
+        if (difficulty < (float)7.5)
         {
             // need to update range here, depending on the difficulty
             // range increasing with the difficulty
@@ -116,7 +102,6 @@ public class EquationControl : MonoBehaviour
                 c = Random.Range(low, high);
                 d = Random.Range(low, high);
 
-
                 if (op2 == " + ")
                 {
                     answer2 = c + d;
@@ -126,7 +111,6 @@ public class EquationControl : MonoBehaviour
                     answer2 = c - d;
                 }
 
-              
                 eq2.text = c.ToString() + op2 + d.ToString() + " = ?";
                 bouttonsControl.ChangeBoutonsValueFirstBg(answer1);
             }
@@ -134,7 +118,6 @@ public class EquationControl : MonoBehaviour
         else
         {
             if (compt % 2 == 0)
-
 
             {
                 randomIndex = Random.Range(0, 2);
@@ -180,7 +163,6 @@ public class EquationControl : MonoBehaviour
                     }
 
                 }
-
                 bouttonsControl.ChangeBoutonsValueSecondBg(answer2);
 
             }
@@ -203,7 +185,6 @@ public class EquationControl : MonoBehaviour
                     {
                         answer2 = c + d + c2;
                     }
-
                 }
 
                 if (op2 == " + ")
@@ -227,7 +208,6 @@ public class EquationControl : MonoBehaviour
                     {
                         answer2 = c - d - c2;
                     }
-
                 }
 
                 bouttonsControl.ChangeBoutonsValueFirstBg(answer1);

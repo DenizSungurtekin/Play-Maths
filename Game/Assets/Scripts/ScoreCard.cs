@@ -5,7 +5,6 @@ using TMPro;
 
 public class ScoreCard : MonoBehaviour
 {
-
     public TextMeshProUGUI textMesh;
     public int score ;
 
