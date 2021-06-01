@@ -7,7 +7,7 @@ using System;
 public class CameraControl : MonoBehaviour
 {
 
-    public string ip = "192.168.1.2";//IP of the raspberry
+    public string ip = "127.0.0.1";
     public int port = 60000;
     public Socket client;
     [SerializeField]
@@ -51,13 +51,14 @@ public class CameraControl : MonoBehaviour
         // Background
         if (transform.position.y >= bg2.position.y) {
             bg1.position = new Vector3(bg1.position.x, bg2.position.y + size, bg1.position.z);
+
             data = (float)0.1; // Value in case there is no server request
 
-            // UNCOMMENT IF THERE IS THE RASBERRYPY
-            /*dataIn = ServerRequest();
+            // UNCOMMENT IF THERE IS Connexion to server, dataIn = [mappedScore, Heartrates, ECD variations]
+            /*dataIn = ServerRequest();  
             data = dataIn[0]; */
 
-            Debug.Log("Received data: "+data);
+            Debug.Log("Received data: "+ data);
 
             updateDifficulty(data);
             updateGame(difficulty);
@@ -124,7 +125,7 @@ public class CameraControl : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("verticalmvt").GetComponent<Player>();
         equationControl.UpdateEquation(compt,difficulty);
         player.ms = (float)(1.0 + (2.0 / 9.0) * (difficulty - 1.0));
-        Debug.Log("MS: "+player.ms);
+        Debug.Log("MS: "+ player.ms);
         Debug.Log("Difficulty: " + difficulty);
     }
 
