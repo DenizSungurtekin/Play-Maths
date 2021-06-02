@@ -53,7 +53,7 @@ public class EquationControl : MonoBehaviour
         }
 
         // Change also buttons
-        bouttonsControl = GameObject.FindGameObjectWithTag("buttons").GetComponent<BouttonsControl>();
+        bouttonsControl = GameObject.FindGameObjectWithTag("button1").GetComponent<BouttonsControl>();
         bouttonsControl.ChangeBoutonsValueFirstBg(answer1);
     }
 
@@ -64,7 +64,7 @@ public class EquationControl : MonoBehaviour
 
     // Update equation here : parameters : compt, difficulty
     public void UpdateEquation(int compt,float difficulty){
-
+        bouttonsControl = GameObject.FindGameObjectWithTag("button1").GetComponent<BouttonsControl>();
         int diff = (int)difficulty;
         low = 0;
         high = 10+diff;

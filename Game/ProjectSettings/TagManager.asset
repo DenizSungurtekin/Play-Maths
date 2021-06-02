@@ -10,6 +10,14 @@ TagManager:
   - heart
   - ScorecardText
   - score
+  - button1
+  - button2
+  - button3
+  - button4
+  - heart1
+  - heart2
+  - heart3
+  - heart4
   layers:
   - Default
   - TransparentFX

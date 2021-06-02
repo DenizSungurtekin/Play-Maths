@@ -39,10 +39,16 @@ public class CameraControl : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("verticalmvt").GetComponent<Player>();
         player.ms = (float)(1.0 + (2.0 / 9.0) * (difficulty - 1.0));
         size = bg1.GetComponent<BoxCollider2D>().size.y;
+
+        updateGame(difficulty);
+        compt++;
+        updateGame(difficulty);
+        compt++;
+
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         // Camera
         Vector3 targetpos = new Vector3(target.position.x,target.position.y,transform.position.z);
@@ -69,14 +75,14 @@ public class CameraControl : MonoBehaviour
 
         if ((ligneInvisible.position.y >= firstText.position.y) && (textCompt % 2 == 0))
         {
-            bouttonsControl = GameObject.FindGameObjectWithTag("buttons").GetComponent<BouttonsControl>();
+            bouttonsControl = GameObject.FindGameObjectWithTag("button1").GetComponent<BouttonsControl>();
             bouttonsControl.CheckButtonValueFirstBg(difficulty);
             textCompt++;
         }
 
         if ((ligneInvisible.position.y >= secondText.position.y) && (textCompt % 2 == 1))
         {
-            bouttonsControl = GameObject.FindGameObjectWithTag("buttons").GetComponent<BouttonsControl>();
+            bouttonsControl = GameObject.FindGameObjectWithTag("button1").GetComponent<BouttonsControl>();
             bouttonsControl.CheckButtonValueSecondBg(difficulty);
             textCompt++;
         }

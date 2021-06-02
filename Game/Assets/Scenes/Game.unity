@@ -138,7 +138,7 @@ GameObject:
   - component: {fileID: 24116410}
   m_Layer: 0
   m_Name: Button4
-  m_TagString: buttons
+  m_TagString: button4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -179,6 +179,10 @@ MonoBehaviour:
   heart2: {fileID: 0}
   heart3: {fileID: 0}
   heart4: {fileID: 0}
+  bouton1: {fileID: 202652863}
+  bouton2: {fileID: 1946551311}
+  bouton3: {fileID: 211935404}
+  bouton4: {fileID: 24116408}
   position_answer: 0
   selected_answer: 0
   min_range: 0
@@ -187,6 +191,8 @@ MonoBehaviour:
   one: 0
   vie_perdu: 0
   equationControl: {fileID: 0}
+  btn: []
+  hearts: []
 --- !u!114 &24116411
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -493,7 +499,7 @@ GameObject:
   - component: {fileID: 202652868}
   m_Layer: 0
   m_Name: Button1
-  m_TagString: buttons
+  m_TagString: button1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -616,6 +622,10 @@ MonoBehaviour:
   heart2: {fileID: 0}
   heart3: {fileID: 0}
   heart4: {fileID: 0}
+  bouton1: {fileID: 202652863}
+  bouton2: {fileID: 1946551311}
+  bouton3: {fileID: 211935404}
+  bouton4: {fileID: 24116408}
   position_answer: 0
   selected_answer: 0
   min_range: 0
@@ -624,6 +634,8 @@ MonoBehaviour:
   one: 0
   vie_perdu: 0
   equationControl: {fileID: 0}
+  btn: []
+  hearts: []
 --- !u!1 &211935404
 GameObject:
   m_ObjectHideFlags: 0
@@ -639,7 +651,7 @@ GameObject:
   - component: {fileID: 211935406}
   m_Layer: 0
   m_Name: Button3
-  m_TagString: buttons
+  m_TagString: button3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -680,6 +692,10 @@ MonoBehaviour:
   heart2: {fileID: 0}
   heart3: {fileID: 0}
   heart4: {fileID: 0}
+  bouton1: {fileID: 202652863}
+  bouton2: {fileID: 1946551311}
+  bouton3: {fileID: 211935404}
+  bouton4: {fileID: 24116408}
   position_answer: 0
   selected_answer: 0
   min_range: 0
@@ -688,6 +704,8 @@ MonoBehaviour:
   one: 0
   vie_perdu: 0
   equationControl: {fileID: 0}
+  btn: []
+  hearts: []
 --- !u!114 &211935407
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -995,7 +1013,7 @@ GameObject:
   - component: {fileID: 351114923}
   m_Layer: 5
   m_Name: Heart2
-  m_TagString: heart
+  m_TagString: heart2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1073,6 +1091,10 @@ MonoBehaviour:
   heart2: {fileID: 351114919}
   heart3: {fileID: 1643778784}
   heart4: {fileID: 534623773}
+  bouton1: {fileID: 202652863}
+  bouton2: {fileID: 1946551311}
+  bouton3: {fileID: 211935404}
+  bouton4: {fileID: 24116408}
   position_answer: 0
   selected_answer: 0
   min_range: 0
@@ -1081,6 +1103,8 @@ MonoBehaviour:
   one: 0
   vie_perdu: 0
   equationControl: {fileID: 0}
+  btn: []
+  hearts: []
 --- !u!1 &387823497
 GameObject:
   m_ObjectHideFlags: 0
@@ -1095,7 +1119,7 @@ GameObject:
   - component: {fileID: 387823501}
   m_Layer: 5
   m_Name: Heart1
-  m_TagString: heart
+  m_TagString: heart1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1173,6 +1197,10 @@ MonoBehaviour:
   heart2: {fileID: 351114919}
   heart3: {fileID: 1643778784}
   heart4: {fileID: 534623773}
+  bouton1: {fileID: 202652863}
+  bouton2: {fileID: 1946551311}
+  bouton3: {fileID: 211935404}
+  bouton4: {fileID: 24116408}
   position_answer: 0
   selected_answer: 0
   min_range: 0
@@ -1181,6 +1209,8 @@ MonoBehaviour:
   one: 0
   vie_perdu: 0
   equationControl: {fileID: 0}
+  btn: []
+  hearts: []
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1414,7 +1444,7 @@ GameObject:
   - component: {fileID: 534623777}
   m_Layer: 5
   m_Name: Heart4
-  m_TagString: heart
+  m_TagString: heart4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1492,6 +1522,10 @@ MonoBehaviour:
   heart2: {fileID: 351114919}
   heart3: {fileID: 1643778784}
   heart4: {fileID: 534623773}
+  bouton1: {fileID: 202652863}
+  bouton2: {fileID: 1946551311}
+  bouton3: {fileID: 211935404}
+  bouton4: {fileID: 24116408}
   position_answer: 0
   selected_answer: 0
   min_range: 0
@@ -1500,6 +1534,8 @@ MonoBehaviour:
   one: 0
   vie_perdu: 0
   equationControl: {fileID: 0}
+  btn: []
+  hearts: []
 --- !u!1 &551848331
 GameObject:
   m_ObjectHideFlags: 0
@@ -1801,6 +1837,10 @@ MonoBehaviour:
   heart2: {fileID: 0}
   heart3: {fileID: 0}
   heart4: {fileID: 0}
+  bouton1: {fileID: 0}
+  bouton2: {fileID: 0}
+  bouton3: {fileID: 0}
+  bouton4: {fileID: 0}
   position_answer: 0
   selected_answer: 0
   min_range: 0
@@ -1809,6 +1849,8 @@ MonoBehaviour:
   one: 0
   vie_perdu: 0
   equationControl: {fileID: 0}
+  btn: []
+  hearts: []
 --- !u!114 &804251011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2180,7 +2222,7 @@ GameObject:
   - component: {fileID: 1643778788}
   m_Layer: 5
   m_Name: Heart3
-  m_TagString: heart
+  m_TagString: heart3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2258,6 +2300,10 @@ MonoBehaviour:
   heart2: {fileID: 351114919}
   heart3: {fileID: 1643778784}
   heart4: {fileID: 534623773}
+  bouton1: {fileID: 202652863}
+  bouton2: {fileID: 1946551311}
+  bouton3: {fileID: 211935404}
+  bouton4: {fileID: 24116408}
   position_answer: 0
   selected_answer: 0
   min_range: 0
@@ -2266,6 +2312,8 @@ MonoBehaviour:
   one: 0
   vie_perdu: 0
   equationControl: {fileID: 0}
+  btn: []
+  hearts: []
 --- !u!1 &1666617728
 GameObject:
   m_ObjectHideFlags: 0
@@ -2377,8 +2425,8 @@ MonoBehaviour:
   operations:
   - ' + '
   - ' - '
-  eq1: {fileID: 0}
-  eq2: {fileID: 0}
+  eq1: {fileID: 1666617729}
+  eq2: {fileID: 28256022}
   chosenOperations: []
   randomIndex: 0
   op1: 
@@ -2798,7 +2846,7 @@ GameObject:
   - component: {fileID: 1946551313}
   m_Layer: 0
   m_Name: Button2
-  m_TagString: buttons
+  m_TagString: button2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2839,6 +2887,10 @@ MonoBehaviour:
   heart2: {fileID: 0}
   heart3: {fileID: 0}
   heart4: {fileID: 0}
+  bouton1: {fileID: 202652863}
+  bouton2: {fileID: 1946551311}
+  bouton3: {fileID: 211935404}
+  bouton4: {fileID: 24116408}
   position_answer: 0
   selected_answer: 0
   min_range: 0
@@ -2847,6 +2899,8 @@ MonoBehaviour:
   one: 0
   vie_perdu: 0
   equationControl: {fileID: 0}
+  btn: []
+  hearts: []
 --- !u!114 &1946551314
 MonoBehaviour:
   m_ObjectHideFlags: 0

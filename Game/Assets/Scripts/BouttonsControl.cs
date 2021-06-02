@@ -12,17 +12,42 @@ public class BouttonsControl : MonoBehaviour
     public GameObject heart3;
     public GameObject heart4;
 
+    public GameObject bouton1;
+    public GameObject bouton2;
+    public GameObject bouton3;
+    public GameObject bouton4;
+
     public int position_answer,selected_answer,min_range,max_range, answer,one,vie_perdu;
     public EquationControl equationControl;
-    GameObject[] btn;
-    GameObject[] hearts;
+    public List<GameObject> btn = new List<GameObject>();
+    public List<GameObject> hearts = new List<GameObject>();
+    //GameObject[] btn;
+    //GameObject[] hearts;
     
 
     void Start()
     {
         vie_perdu = 0;
-        hearts = GameObject.FindGameObjectsWithTag("heart");
-        btn = GameObject.FindGameObjectsWithTag("buttons");
+        bouton1 = GameObject.Find("Button1");
+        bouton2 = GameObject.Find("Button2");
+        bouton3 = GameObject.Find("Button3");
+        bouton4 = GameObject.Find("Button4");
+
+        btn.Add(bouton1);
+        btn.Add(bouton2);
+        btn.Add(bouton3);
+        btn.Add(bouton4);
+
+        heart1 = GameObject.Find("Heart1");
+        heart2 = GameObject.Find("Heart2");
+        heart3 = GameObject.Find("Heart3");
+        heart4 = GameObject.Find("Heart4");
+
+        hearts.Add(heart1);
+        hearts.Add(heart2);
+        hearts.Add(heart3);
+        hearts.Add(heart4);
+
         selected_answer = 0; //initial value if no button are selected
     }
 
@@ -58,14 +83,14 @@ public class BouttonsControl : MonoBehaviour
 
     public void ChangeBoutonsValueFirstBg(int answer)
     {
-        GameObject[] btn = GameObject.FindGameObjectsWithTag("buttons");
+        //GameObject[] btn = GameObject.FindGameObjectsWithTag("buttons");
         int[] boutton_values = new int[4];
         position_answer = Random.Range(0, 3);
 
         min_range = answer - 5;
         max_range = answer + 5;
 
-         for (int i = 0; i < btn.Length; i++)
+         for (int i = 0; i < btn.Count; i++)
             {
                 if (i == position_answer)
                 {
@@ -94,14 +119,14 @@ public class BouttonsControl : MonoBehaviour
 
     public void ChangeBoutonsValueSecondBg(int answer)
     {
-        GameObject[] btn = GameObject.FindGameObjectsWithTag("buttons");
+        //GameObject[] btn = GameObject.FindGameObjectsWithTag("buttons");
         int[] boutton_values = new int[4];
         position_answer = Random.Range(0, 3);
 
         min_range = answer - 5;
         max_range = answer + 5;
 
-        for (int i = 0; i < btn.Length; i++)
+        for (int i = 0; i < btn.Count; i++)
         {
             if (i == position_answer)
             {
@@ -137,6 +162,8 @@ public class BouttonsControl : MonoBehaviour
         // Update for score depends on :
         // Need to import these parameters : Time, Difficulty
         // to compute the score par ex : score = time * Difficulty * cst
+
+
         if (btn[selected_answer].GetComponentInChildren<Text>().text == equationControl.answer1.ToString())
         {
             SoundManagerScript.PlaySound("good");
