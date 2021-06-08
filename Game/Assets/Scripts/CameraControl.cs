@@ -6,12 +6,19 @@ using System;
 
 public class CameraControl : MonoBehaviour
 {
-
     public string ip = "127.0.0.1";
     public int port = 60000;
     public Socket client;
     [SerializeField]
     public float[] dataIn;
+
+    public static new float[] mappedScore = new float[1000];
+    public static new float[] HR = new float[1000];
+    public static new float[] EDA = new float[1000];
+    public static new int[] score = new int[1000];
+    public static new string[] time = new string[1000];
+
+    public static int index;
 
     public Transform target;
     public Transform bg1;
@@ -45,11 +52,14 @@ public class CameraControl : MonoBehaviour
         updateGame(difficulty);
         compt++;
 
+        index = 0;
+
     }
 
     // Update is called once per frame
     void Update()
     {
+
         // Camera
         Vector3 targetpos = new Vector3(target.position.x,target.position.y,transform.position.z);
         transform.position = targetpos;
@@ -61,10 +71,18 @@ public class CameraControl : MonoBehaviour
             data = (float)0.1; // Value in case there is no server request
 
             // UNCOMMENT IF THERE IS Connexion to server, dataIn = [mappedScore, Heartrates, ECD variations]
-            /*dataIn = ServerRequest();  
+            /*dataIn = ServerRequest();
             data = dataIn[0]; */
 
-            Debug.Log("Received data: "+ data);
+            time[index]  = System.DateTime.Now.ToString();
+            mappedScore[index] = (float)0.2;
+            HR[index] = (float)0.3;
+            EDA[index] = (float)0.4;
+            score[index] = ScoreScript.scorefinal;
+
+            index++;
+
+            //Debug.Log("Received data: "+ data);
 
             updateDifficulty(data);
             updateGame(difficulty);
