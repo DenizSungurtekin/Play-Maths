@@ -75,9 +75,9 @@ public class CameraControl : MonoBehaviour
             data = dataIn[0]; */
 
             time[index]  = System.DateTime.Now.ToString();
-            mappedScore[index] = (float)0.2;
-            HR[index] = (float)0.3;
-            EDA[index] = (float)0.4;
+            mappedScore[index] = dataIn[0];
+            HR[index] = dataIn[1];
+            EDA[index] = dataIn[2];
             score[index] = ScoreScript.scorefinal;
 
             index++;
