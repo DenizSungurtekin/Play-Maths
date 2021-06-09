@@ -1,6 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - AgeName
     - BouttonsControl
     - CameraControl
     - EquationControl
@@ -15,6 +16,7 @@ ScriptsOnlyBuild:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.IK.Editor.dll:
     - UnityEditor.U2D.IK.IKEditorManager
+    - UnityEditor.U2D.IK.IKGizmos
     Unity.2D.IK.Runtime.dll:
     - UnityEditor.U2D.IK.IKEditorManagerHelper
     Unity.2D.Tilemap.Editor.dll:
@@ -78,33 +80,33 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1466}
+      Script: {instanceID: 1468}
     - Class: 114
-      Script: {instanceID: 2290}
+      Script: {instanceID: 2294}
     - Class: 114
-      Script: {instanceID: 2662}
+      Script: {instanceID: 2666}
     - Class: 114
-      Script: {instanceID: 2812}
+      Script: {instanceID: 2816}
     - Class: 114
-      Script: {instanceID: 2984}
+      Script: {instanceID: 2988}
     - Class: 114
-      Script: {instanceID: 3196}
+      Script: {instanceID: 3200}
     - Class: 114
-      Script: {instanceID: 3308}
+      Script: {instanceID: 3312}
     - Class: 114
-      Script: {instanceID: 3374}
+      Script: {instanceID: 3378}
     - Class: 114
-      Script: {instanceID: 3670}
+      Script: {instanceID: 3674}
     - Class: 114
-      Script: {instanceID: 3782}
+      Script: {instanceID: 3786}
     - Class: 114
-      Script: {instanceID: 4048}
+      Script: {instanceID: 4052}
     - Class: 114
-      Script: {instanceID: 4314}
+      Script: {instanceID: 4318}
     - Class: 114
-      Script: {instanceID: 5034}
+      Script: {instanceID: 5038}
     - Class: 114
-      Script: {instanceID: 5260}
+      Script: {instanceID: 5264}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -141,25 +143,27 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1466}
+      Script: {instanceID: 1468}
     - Class: 114
-      Script: {instanceID: 1970}
+      Script: {instanceID: 1974}
     - Class: 114
-      Script: {instanceID: 2662}
+      Script: {instanceID: 2666}
     - Class: 114
-      Script: {instanceID: 2812}
+      Script: {instanceID: 2816}
     - Class: 114
-      Script: {instanceID: 2854}
+      Script: {instanceID: 2858}
     - Class: 114
-      Script: {instanceID: 2984}
+      Script: {instanceID: 2988}
     - Class: 114
-      Script: {instanceID: 3196}
+      Script: {instanceID: 3200}
     - Class: 114
-      Script: {instanceID: 3308}
+      Script: {instanceID: 3312}
     - Class: 114
-      Script: {instanceID: 4648}
+      Script: {instanceID: 4652}
     - Class: 114
-      Script: {instanceID: 4832}
+      Script: {instanceID: 4836}
+    - Class: 114
+      Script: {instanceID: 29770}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -198,37 +202,37 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1466}
+      Script: {instanceID: 1468}
     - Class: 114
-      Script: {instanceID: 1728}
+      Script: {instanceID: 1732}
     - Class: 114
-      Script: {instanceID: 1820}
+      Script: {instanceID: 1824}
     - Class: 114
-      Script: {instanceID: 1970}
+      Script: {instanceID: 1974}
     - Class: 114
-      Script: {instanceID: 2282}
+      Script: {instanceID: 2286}
     - Class: 114
-      Script: {instanceID: 2662}
+      Script: {instanceID: 2666}
     - Class: 114
-      Script: {instanceID: 2812}
+      Script: {instanceID: 2816}
     - Class: 114
-      Script: {instanceID: 2854}
+      Script: {instanceID: 2858}
     - Class: 114
-      Script: {instanceID: 2984}
+      Script: {instanceID: 2988}
     - Class: 114
-      Script: {instanceID: 3196}
+      Script: {instanceID: 3200}
     - Class: 114
-      Script: {instanceID: 3308}
+      Script: {instanceID: 3312}
     - Class: 114
-      Script: {instanceID: 4180}
+      Script: {instanceID: 4184}
     - Class: 114
-      Script: {instanceID: 4346}
+      Script: {instanceID: 4350}
     - Class: 114
-      Script: {instanceID: 4446}
+      Script: {instanceID: 4450}
     - Class: 114
-      Script: {instanceID: 4466}
+      Script: {instanceID: 4470}
     - Class: 114
-      Script: {instanceID: 4802}
+      Script: {instanceID: 4806}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -926,7 +930,7 @@ ScriptsOnlyBuild:
     className: VertexColorCycler
   - hash:
       serializedVersion: 2
-      Hash: 9ea196411d9187d6ff4ab18fcf0d1d00
+      Hash: a6ecaa5546b4bea0d7f2fa1572917bc5
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ScoreCard
@@ -1010,7 +1014,7 @@ ScriptsOnlyBuild:
     className: TouchInputModule
   - hash:
       serializedVersion: 2
-      Hash: 6f9041abff5b112ae98735fe63504d7a
+      Hash: 1c44f210d514365d68590193c9130038
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: BouttonsControl
@@ -1026,9 +1030,15 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: TMPro.Examples
     className: TMP_TextEventCheck
+  - hash:
+      serializedVersion: 2
+      Hash: 4f2db873350bd83478c274c79e9bdb16
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: AgeName
   platform: 5
   scenePathNames:
   - Assets/Scenes/UI.unity
   - Assets/Scenes/Game.unity
   - Assets/Scenes/ScoreCard.unity
-  playerPath: C:/Users/dede/OneDrive/Documents/Bureau/build/2D_TRY.exe
+  playerPath: C:/Users/dede/OneDrive/Documents/Bureau/build/PlayMaths.exe

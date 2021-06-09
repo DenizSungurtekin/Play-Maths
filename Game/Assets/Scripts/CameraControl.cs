@@ -68,18 +68,22 @@ public class CameraControl : MonoBehaviour
         if (transform.position.y >= bg2.position.y) {
             bg1.position = new Vector3(bg1.position.x, bg2.position.y + size, bg1.position.z);
 
-            data = (float)0.1; // Value in case there is no server request
+            //data = (float)0.1; // Value in case there is no server request
 
             // UNCOMMENT IF THERE IS Connexion to server, dataIn = [mappedScore, Heartrates, ECD variations]
-            /*dataIn = ServerRequest();
-            data = dataIn[0]; */
+            dataIn = ServerRequest();
+            data = dataIn[0]; 
 
             time[index]  = System.DateTime.Now.ToString();
             mappedScore[index] = dataIn[0];
             HR[index] = dataIn[1];
             EDA[index] = dataIn[2];
             score[index] = ScoreScript.scorefinal;
-
+            Debug.Log(time[index]);
+            Debug.Log(mappedScore[index]);
+            Debug.Log(HR[index]);
+            Debug.Log(EDA[index]);
+            Debug.Log(score[index]);
             index++;
 
             //Debug.Log("Received data: "+ data);
