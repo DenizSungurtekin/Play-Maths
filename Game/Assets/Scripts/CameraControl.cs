@@ -29,6 +29,8 @@ public class CameraControl : MonoBehaviour
     public string operation1;
     public string operation2;
 
+    public float add = (float)0.0;
+
     // difficult and scrolling speed should be defined here
     private int compt,textCompt; //compt is used to change button value depending of the equation of the current bg, textCompt is to know when to check button value
     EquationControl equationControl;
@@ -47,9 +49,9 @@ public class CameraControl : MonoBehaviour
         player.ms = (float)(1.0 + (2.0 / 9.0) * (difficulty - 1.0));
         size = bg1.GetComponent<BoxCollider2D>().size.y;
 
-        updateGame(difficulty);
+        updateGame(difficulty,(float)0.0);
         compt++;
-        updateGame(difficulty);
+        updateGame(difficulty, (float)0.0);
         compt++;
 
         index = 0;
@@ -68,12 +70,13 @@ public class CameraControl : MonoBehaviour
         if (transform.position.y >= bg2.position.y) {
             bg1.position = new Vector3(bg1.position.x, bg2.position.y + size, bg1.position.z);
 
-            //data = (float)0.1; // Value in case there is no server request
+            //data = (float)0.2; // Value in case there is no server request
 
             // UNCOMMENT IF THERE IS Connexion to server, dataIn = [mappedScore, Heartrates, ECD variations]
+            
             dataIn = ServerRequest();
             data = dataIn[0]; 
-
+           
             time[index]  = System.DateTime.Now.ToString();
             mappedScore[index] = dataIn[0];
             HR[index] = dataIn[1];
@@ -89,7 +92,7 @@ public class CameraControl : MonoBehaviour
             //Debug.Log("Received data: "+ data);
 
             updateDifficulty(data);
-            updateGame(difficulty);
+            updateGame(difficulty,data);
 
             compt++;
             SwitchBac();
@@ -147,12 +150,23 @@ public class CameraControl : MonoBehaviour
         return floatsReceived;
     }
 
-    public void updateGame(float difficulty)
+    public void updateGame(float difficulty,float data)
     {
         equationControl = GameObject.FindGameObjectWithTag("equations").GetComponent<EquationControl>();
         player = GameObject.FindGameObjectWithTag("verticalmvt").GetComponent<Player>();
         equationControl.UpdateEquation(compt,difficulty);
-        player.ms = (float)(1.0 + (2.0 / 9.0) * (difficulty - 1.0));
+        if (difficulty > (float)7.5)
+        {
+            player.ms = (float)2.0 + add;
+            if (player.ms < (float)3.0) { 
+                add = add + data; //The received data
+            }
+            
+        }
+        else
+        {
+            player.ms = (float)(1.0 + (2.0 / 9.0) * (difficulty - 1.0));
+        }
         Debug.Log("MS: "+ player.ms);
         Debug.Log("Difficulty: " + difficulty);
     }

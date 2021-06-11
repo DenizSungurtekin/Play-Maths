@@ -17,7 +17,9 @@ public class BouttonsControl : MonoBehaviour
     public GameObject bouton3;
     public GameObject bouton4;
 
-    public int position_answer,selected_answer,min_range,max_range, answer,one,vie_perdu;
+
+
+    public int position_answer,selected_answer,min_range,max_range, answer,one,vie_perdu,incertitude;
     public EquationControl equationControl;
     public List<GameObject> btn = new List<GameObject>();
     public List<GameObject> hearts = new List<GameObject>();
@@ -81,14 +83,17 @@ public class BouttonsControl : MonoBehaviour
         }
     }
 
-    public void ChangeBoutonsValueFirstBg(int answer)
+    public void ChangeBoutonsValueFirstBg(int answer,float difficulty)
     {
         //GameObject[] btn = GameObject.FindGameObjectsWithTag("buttons");
         int[] boutton_values = new int[4];
-        position_answer = Random.Range(0, 3);
+        position_answer = Random.Range(0, 4);
 
-        min_range = answer - 5;
-        max_range = answer + 5;
+        incertitude = (int)((float)14.0 - difficulty);
+        Debug.Log("inc" + incertitude);
+
+        min_range = answer - incertitude;
+        max_range = answer + incertitude;
 
          for (int i = 0; i < btn.Count; i++)
             {
@@ -117,14 +122,17 @@ public class BouttonsControl : MonoBehaviour
             }
     }
 
-    public void ChangeBoutonsValueSecondBg(int answer)
+    public void ChangeBoutonsValueSecondBg(int answer, float difficulty)
     {
         //GameObject[] btn = GameObject.FindGameObjectsWithTag("buttons");
         int[] boutton_values = new int[4];
-        position_answer = Random.Range(0, 3);
+        position_answer = Random.Range(0, 4);
 
-        min_range = answer - 5;
-        max_range = answer + 5;
+        incertitude = (int)((float)16 - difficulty);
+        Debug.Log("inc"+ incertitude);
+
+        min_range = answer - incertitude;
+        max_range = answer + incertitude;
 
         for (int i = 0; i < btn.Count; i++)
         {

@@ -54,7 +54,7 @@ public class EquationControl : MonoBehaviour
 
         // Change also buttons
         bouttonsControl = GameObject.FindGameObjectWithTag("button1").GetComponent<BouttonsControl>();
-        bouttonsControl.ChangeBoutonsValueFirstBg(answer1);
+        bouttonsControl.ChangeBoutonsValueFirstBg(answer1,1);
     }
 
     // Update is called once per frame
@@ -92,7 +92,7 @@ public class EquationControl : MonoBehaviour
 
                 eq1.text = a.ToString() + op1 + b.ToString() + " = ?";
 
-                bouttonsControl.ChangeBoutonsValueSecondBg(answer2);
+                bouttonsControl.ChangeBoutonsValueSecondBg(answer2,difficulty);
             }
             else
             {
@@ -112,7 +112,7 @@ public class EquationControl : MonoBehaviour
                 }
 
                 eq2.text = c.ToString() + op2 + d.ToString() + " = ?";
-                bouttonsControl.ChangeBoutonsValueFirstBg(answer1);
+                bouttonsControl.ChangeBoutonsValueFirstBg(answer1,difficulty);
             }
         }
         else
@@ -163,7 +163,7 @@ public class EquationControl : MonoBehaviour
                     }
 
                 }
-                bouttonsControl.ChangeBoutonsValueSecondBg(answer2);
+                bouttonsControl.ChangeBoutonsValueSecondBg(answer2,difficulty);
 
             }
             else
@@ -210,7 +210,7 @@ public class EquationControl : MonoBehaviour
                     }
                 }
 
-                bouttonsControl.ChangeBoutonsValueFirstBg(answer1);
+                bouttonsControl.ChangeBoutonsValueFirstBg(answer1,difficulty);
             }
 
 
